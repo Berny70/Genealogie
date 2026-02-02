@@ -1,28 +1,19 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <title>Généalogie Marchant</title>
-
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#6b5b4b">
-
-  <link rel="manifest" href="manifest.json">
-</head>
-<body>
-
 <h1>Descendants de Lucien & Pauline</h1>
 
-<input
-  type="search"
-  id="search"
-  placeholder="Rechercher un nom ou prénom…"
-  autocomplete="off"
-  style="width:100%;padding:10px;font-size:16px;margin-bottom:10px;"
->
+<button id="showTree">🌳 Afficher l’arbre</button>
+<button id="showSearch">🔎 Recherche</button>
 
-<ul id="results"></ul>
+<div id="tree" style="display:none;"></div>
+
+<div id="searchView">
+  <input
+    type="search"
+    id="search"
+    placeholder="Rechercher un nom ou prénom…"
+    autocomplete="off"
+    style="width:100%;padding:10px;font-size:16px;margin-bottom:10px;"
+  >
+  <ul id="results"></ul>
+</div>
 
 <script src="app.js"></script>
-</body>
-</html>

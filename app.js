@@ -1,9 +1,11 @@
-fetch("./genealogie.json")
-  .then(r => r.json())
+fetch("/Genealogie/genealogie.json")
+  .then(r => {
+    if (!r.ok) throw new Error("HTTP " + r.status);
+    return r.json();
+  })
   .then(data => {
-    const persons = data.persons;
-    document.getElementById("app").innerHTML =
-      Object.keys(persons).length + " personnes chargées";
+    document.getElementById("app").textContent =
+      Object.keys(data.persons).length + " personnes chargées";
   })
   .catch(err => {
     document.getElementById("app").textContent =
@@ -11,7 +13,7 @@ fetch("./genealogie.json")
     console.error(err);
   });
 
-// PWA
 if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("./service-worker.js");
+  navigator.serviceWorker.register("/Genealogie/service-worker.js");
 }
+

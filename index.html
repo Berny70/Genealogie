@@ -1,7 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Généalogie Marchant</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#6b5b4b">
+
+  <link rel="manifest" href="manifest.json">
+
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      margin: 10px;
+    }
+
+    button {
+      margin-right: 6px;
+      margin-bottom: 10px;
+      padding: 6px 10px;
+      font-size: 14px;
+    }
+
+    .person {
+      border-left: 3px solid #6b5b4b;
+      margin: 6px 0;
+      padding-left: 10px;
+    }
+
+    .name {
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .dates {
+      font-size: 0.85em;
+      color: #555;
+    }
+
+    .conjoint {
+      margin-left: 10px;
+      font-style: italic;
+      color: #444;
+    }
+
+    .children {
+      margin-left: 20px;
+      display: none;
+    }
+
+    .open > .children {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+
 <h1>Descendants de Lucien & Pauline</h1>
+
 <p style="color:red;font-weight:bold;">
-TEST ARBRE VISIBLE
+  TEST ARBRE VISIBLE
 </p>
+
 <button id="showTree">🌳 Afficher l’arbre</button>
 <button id="showSearch">🔎 Recherche</button>
 
@@ -19,3 +80,6 @@ TEST ARBRE VISIBLE
 </div>
 
 <script src="app.js"></script>
+
+</body>
+</html>

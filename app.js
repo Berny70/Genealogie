@@ -42,11 +42,20 @@ fetch("genealogie.json")
 // =========================
 
 function afficherPremierRang() {
-  const enfants = personnes.filter(p =>
+  const enfantsBruts = personnes.filter(p =>
     p.ID_Père === ID_LUCIEN && p.ID_Mère === ID_PAULINE
   );
 
-  console.log("Enfants de Lucien & Pauline :", enfants);
+  // 🧹 Déduplication
+  const seen = new Set();
+  const enfants = enfantsBruts.filter(e => {
+    const key = `${e.Prénom}|${e.Nom}|${e.Naissance}`;
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+
+  console.log("Enfants uniques :", enfants);
 
   const container = document.createElement("div");
   container.id = "premier-rang";
@@ -59,10 +68,8 @@ function afficherPremierRang() {
 
   enfants.forEach(e => {
     const li = document.createElement("li");
-
-    const naissance = e.Naissance ? e.Naissance : "?";
-    const deces = e.Décès ? e.Décès : "";
-
+    const naissance = e.Naissance ?? "?";
+    const deces = e.Décès ?? "";
     li.textContent = `${e.Prénom} ${e.Nom} (${naissance}–${deces})`;
     ul.appendChild(li);
   });

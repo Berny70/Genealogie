@@ -4,16 +4,15 @@ document.addEventListener("DOMContentLoaded", () => {
   let CHILDREN = {};
 
   const treeDiv = document.getElementById("tree");
-  const searchView = document.getElementById("searchView");
 
   document.getElementById("showTree").onclick = () => {
     treeDiv.style.display = "block";
-    searchView.style.display = "none";
+    document.getElementById("searchView").style.display = "none";
   };
 
   document.getElementById("showSearch").onclick = () => {
     treeDiv.style.display = "none";
-    searchView.style.display = "block";
+    document.getElementById("searchView").style.display = "block";
   };
 
   fetch("/Genealogie/genealogie.json")
@@ -21,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(data => {
       PERSONS = data.persons;
 
+      // index enfants
       Object.values(PERSONS).forEach(p => {
         if (p.pere) {
           CHILDREN[p.pere] = CHILDREN[p.pere] || [];
@@ -32,44 +32,86 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
 
-      initSearch();
       buildTree();
+      initSearch();
     });
 
+  // 🌳 arbre principal
   function buildTree() {
     treeDiv.innerHTML = "";
-    treeDiv.appendChild(renderPerson(1, 0)); // Lucien
+
+    const lucien = renderPerson(1, true);
+    treeDiv.appendChild(lucien);
+
+    // ouvrir automatiquement les enfants de Lucien
+    lucien.classList.add("open");
   }
 
-  function renderPerson(id, level) {
+  function renderPerson(id, isRoot = false) {
     const p = PERSONS[id];
     const container = document.createElement("div");
-    container.style.marginLeft = (level * 20) + "px";
+    container.className = "person";
 
-    const label = document.createElement("div");
-    label.textContent = `${p.prenom} ${p.nom}`;
-    label.style.cursor = "pointer";
-    label.style.fontWeight = "bold";
+    // nom + dates
+    const name = document.createElement("div");
+    name.className = "name";
+    name.textContent = `${p.prenom} ${p.nom}`;
+    container.appendChild(name);
 
-    container.appendChild(label);
+    if (p.naissance || p.deces) {
+      const dates = document.createElement("div");
+      dates.className = "dates";
+      dates.textContent =
+        `(${p.naissance || "?"}–${p.deces || "?"})`;
+      container.appendChild(dates);
+    }
 
+    // conjoints
+    (p.conjoints || []).forEach(cid => {
+      const c = PERSONS[cid];
+      if (!c) return;
+      const conj = document.createElement("div");
+      conj.className = "conjoint";
+      conj.textContent = `💍 ${c.prenom} ${c.nom}`;
+      container.appendChild(conj);
+    });
+
+    // enfants
     const childrenDiv = document.createElement("div");
-    childrenDiv.style.display = "none";
+    childrenDiv.className = "children";
     container.appendChild(childrenDiv);
 
-    label.onclick = () => {
-      if (childrenDiv.childElementCount === 0) {
-        (CHILDREN[id] || []).forEach(cid => {
-          childrenDiv.appendChild(renderPerson(cid, level + 1));
-        });
-      }
-      childrenDiv.style.display =
-        childrenDiv.style.display === "none" ? "block" : "none";
+    (CHILDREN[id] || []).forEach(cid => {
+      childrenDiv.appendChild(renderPerson(cid));
+    });
+
+    // clic = ouvrir / fermer
+    name.onclick = () => {
+      container.classList.toggle("open");
     };
+
+    // clic long = fiche personne
+    let pressTimer;
+    name.onmousedown = () => {
+      pressTimer = setTimeout(() => showPerson(p), 600);
+    };
+    name.onmouseup = () => clearTimeout(pressTimer);
+    name.onmouseleave = () => clearTimeout(pressTimer);
 
     return container;
   }
 
+  // 📄 fiche personne
+  function showPerson(p) {
+    alert(
+      `${p.prenom} ${p.nom}\n\n` +
+      `Naissance : ${p.naissance || "?"}\n` +
+      `Décès : ${p.deces || "?"}\n` +
+      `Génération : ${p.generation}`
+    );
+  }
+
+  // 🔎 recherche (inchangée)
   function initSearch() {
     const input = document.getElementById("search");
     const results = document.getElementById("results");
@@ -77,7 +119,6 @@ document.addEventListener("DOMContentLoaded", () => {
     input.addEventListener("input", () => {
       const q = input.value.trim().toLowerCase();
       results.innerHTML = "";
-
       if (q.length < 2) return;
 
       Object.values(PERSONS)
@@ -89,11 +130,13 @@ document.addEventListener("DOMContentLoaded", () => {
         .forEach(p => {
           const li = document.createElement("li");
           li.textContent = `${p.prenom} ${p.nom}`;
+          li.onclick = () => showPerson(p);
           results.appendChild(li);
         });
     });
   }
 
+  // PWA
   if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("/Genealogie/service-worker.js");
   }

@@ -1,5 +1,9 @@
 let personnes = [];
 
+// 🔹 IDs des parents racine
+const ID_LUCIEN = 1;
+const ID_PAULINE = 2;
+
 fetch("genealogie.json")
   .then(r => {
     if (!r.ok) throw new Error("Erreur HTTP " + r.status);
@@ -17,13 +21,52 @@ fetch("genealogie.json")
       throw new Error("Format JSON inattendu");
     }
 
+    console.log("Personnes chargées :", personnes.length);
+
+    // 🏷️ Titre
     document.querySelector("h1").textContent =
       `Descendants de Lucien & Pauline (${personnes.length} personnes)`;
 
-    console.log("Personnes chargées :", personnes.length);
+    // 🌳 AFFICHAGE DU PREMIER RANG
+    afficherPremierRang();
   })
   .catch(err => {
     console.error("Erreur chargement :", err);
     document.body.innerHTML +=
       "<p style='color:red;font-weight:bold'>Erreur de chargement des données</p>";
   });
+
+
+// =========================
+// 🌿 FONCTIONS
+// =========================
+
+function afficherPremierRang() {
+  const enfants = personnes.filter(p =>
+    p.ID_Père === ID_LUCIEN && p.ID_Mère === ID_PAULINE
+  );
+
+  console.log("Enfants de Lucien & Pauline :", enfants);
+
+  const container = document.createElement("div");
+  container.id = "premier-rang";
+
+  const h2 = document.createElement("h2");
+  h2.textContent = "Enfants de Lucien & Pauline";
+  container.appendChild(h2);
+
+  const ul = document.createElement("ul");
+
+  enfants.forEach(e => {
+    const li = document.createElement("li");
+
+    const naissance = e.Naissance ? e.Naissance : "?";
+    const deces = e.Décès ? e.Décès : "";
+
+    li.textContent = `${e.Prénom} ${e.Nom} (${naissance}–${deces})`;
+    ul.appendChild(li);
+  });
+
+  container.appendChild(ul);
+  document.body.appendChild(container);
+}

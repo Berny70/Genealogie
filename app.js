@@ -43,7 +43,7 @@ function chargerJSON() {
 // AFFICHAGE RACINE
 // =========================
 function afficherRacine() {
-  const container = document.getElementById("arbre");
+  const container = document.getElementById("tree");
 
   if (!container) {
     console.error("❌ <div id='arbre'> introuvable dans le HTML");

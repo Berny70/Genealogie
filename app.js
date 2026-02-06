@@ -1,5 +1,5 @@
 /*************************************************
- *  GÉNÉALOGIE – ARBRE INFINI (clic sur clic)
+ *  GÉNÉALOGIE – ARBRE INFINI + CONJOINTS
  *  Compatible genealogie.json (format actuel)
  *************************************************/
 
@@ -15,15 +15,20 @@ const ID_PAULINE = 2;
 document.addEventListener("DOMContentLoaded", () => {
 
   // Boutons de navigation
-  document.getElementById("showTree").addEventListener("click", () => {
-    document.getElementById("tree").style.display = "block";
-    document.getElementById("searchView").style.display = "none";
-  });
+  const btnTree = document.getElementById("showTree");
+  const btnSearch = document.getElementById("showSearch");
 
-  document.getElementById("showSearch").addEventListener("click", () => {
-    document.getElementById("tree").style.display = "none";
-    document.getElementById("searchView").style.display = "block";
-  });
+  if (btnTree && btnSearch) {
+    btnTree.addEventListener("click", () => {
+      document.getElementById("tree").style.display = "block";
+      document.getElementById("searchView").style.display = "none";
+    });
+
+    btnSearch.addEventListener("click", () => {
+      document.getElementById("tree").style.display = "none";
+      document.getElementById("searchView").style.display = "block";
+    });
+  }
 
   chargerJSON();
 });
@@ -40,15 +45,18 @@ function chargerJSON() {
     .then(data => {
       personnes = data;
 
-      document.querySelector("h1").textContent =
-        `Descendants de Lucien & Pauline (${personnes.length} personnes)`;
+      const h1 = document.querySelector("h1");
+      if (h1) {
+        h1.textContent =
+          `Descendants de Lucien & Pauline (${personnes.length} personnes)`;
+      }
 
       afficherRacine();
     })
     .catch(err => {
       console.error("Erreur chargement JSON :", err);
       document.body.innerHTML +=
-        "<p style='color:red;font-weight:bold'>Erreur de chargement genealogie.json</p>";
+        "<p style='color:red;font-weight:bold'>Erreur de chargement de genealogie.json</p>";
     });
 }
 
@@ -76,16 +84,35 @@ function afficherRacine() {
 }
 
 // =========================
-// CRÉATION NŒUD (ARBRE INFINI)
+// CRÉATION D’UN NŒUD (PERSONNE)
 // =========================
 function creerNoeud(personne) {
   const wrapper = document.createElement("div");
   wrapper.className = "person";
 
+  // Nom principal (cliquable)
   const nom = document.createElement("div");
   nom.className = "name";
   nom.textContent = formatPersonne(personne);
 
+  // --- Conjoints ---
+  const conjointsDiv = document.createElement("div");
+  conjointsDiv.className = "conjoint";
+
+  if (Array.isArray(personne.conjoints) && personne.conjoints.length > 0) {
+    personne.conjoints.forEach(idConjoint => {
+      const conjoint = trouverPersonneParID(idConjoint);
+      if (conjoint) {
+        const div = document.createElement("div");
+        div.textContent =
+          `♡ ${conjoint["Prénom"]} ${conjoint["Nom"]}` +
+          formatDates(conjoint);
+        conjointsDiv.appendChild(div);
+      }
+    });
+  }
+
+  // --- Enfants ---
   const enfantsDiv = document.createElement("div");
   enfantsDiv.className = "children";
 
@@ -102,16 +129,30 @@ function creerNoeud(personne) {
   });
 
   wrapper.appendChild(nom);
+  if (conjointsDiv.childElementCount > 0) {
+    wrapper.appendChild(conjointsDiv);
+  }
   wrapper.appendChild(enfantsDiv);
 
   return wrapper;
 }
 
 // =========================
-// FORMAT AFFICHAGE
+// UTILITAIRES
 // =========================
+function trouverPersonneParID(id) {
+  return personnes.find(p => p.ID === id);
+}
+
 function formatPersonne(p) {
   const n = p.Naissance ?? "?";
   const d = p["Décès"] ? `–${p["Décès"]}` : "";
   return `${p["Prénom"]} ${p["Nom"]} (${n}${d})`;
+}
+
+function formatDates(p) {
+  if (!p.Naissance && !p["Décès"]) return "";
+  const n = p.Naissance ? p.Naissance : "?";
+  const d = p["Décès"] ? `–${p["Décès"]}` : "";
+  return ` (${n}${d})`;
 }

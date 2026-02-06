@@ -1,39 +1,43 @@
 /*************************************************
  *  GÉNÉALOGIE – ARBRE INFINI (clic sur clic)
- *  Compatible genealogie.json (format actuel)
  *************************************************/
 
 let personnes = [];
 
-// Racines : Lucien & Pauline
 const ID_LUCIEN = 1;
 const ID_PAULINE = 2;
+
+// ⏳ ATTEND QUE LE HTML SOIT CHARGÉ
+document.addEventListener("DOMContentLoaded", () => {
+  chargerJSON();
+});
 
 // =========================
 // CHARGEMENT DU JSON
 // =========================
-fetch("genealogie.json")
-  .then(r => {
-    if (!r.ok) throw new Error("Erreur HTTP " + r.status);
-    return r.json();
-  })
-  .then(data => {
-    console.log("JSON chargé :", data.length, "personnes");
-    personnes = data;
+function chargerJSON() {
+  fetch("genealogie.json")
+    .then(r => {
+      if (!r.ok) throw new Error("Erreur HTTP " + r.status);
+      return r.json();
+    })
+    .then(data => {
+      personnes = data;
 
-    const h1 = document.querySelector("h1");
-    if (h1) {
-      h1.textContent =
-        `Descendants de Lucien & Pauline (${personnes.length} personnes)`;
-    }
+      const h1 = document.querySelector("h1");
+      if (h1) {
+        h1.textContent =
+          `Descendants de Lucien & Pauline (${personnes.length} personnes)`;
+      }
 
-    afficherRacine();
-  })
-  .catch(err => {
-    console.error("Erreur chargement JSON :", err);
-    document.body.innerHTML +=
-      "<p style='color:red;font-weight:bold'>Erreur de chargement de genealogie.json</p>";
-  });
+      afficherRacine();
+    })
+    .catch(err => {
+      console.error("Erreur chargement JSON :", err);
+      document.body.innerHTML +=
+        "<p style='color:red;font-weight:bold'>Erreur de chargement de genealogie.json</p>";
+    });
+}
 
 // =========================
 // AFFICHAGE RACINE

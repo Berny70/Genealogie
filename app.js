@@ -1,107 +1,99 @@
+/*************************************************
+ *  GÉNÉALOGIE – ARBRE INFINI (clic sur clic)
+ *  Compatible genealogie.json (format actuel)
+ *************************************************/
+
 let personnes = [];
 
-// 🔹 IDs des parents racine
+// Racines : Lucien & Pauline
 const ID_LUCIEN = 1;
 const ID_PAULINE = 2;
 
+// =========================
+// CHARGEMENT DU JSON
+// =========================
 fetch("genealogie.json")
   .then(r => {
     if (!r.ok) throw new Error("Erreur HTTP " + r.status);
     return r.json();
   })
   .then(data => {
-    console.log("JSON brut :", data);
+    console.log("JSON chargé :", data.length, "personnes");
+    personnes = data;
 
-    // 🛡️ Normalisation : tableau quoi qu’il arrive
-    if (Array.isArray(data)) {
-      personnes = data;
-    } else if (data.personnes && Array.isArray(data.personnes)) {
-      personnes = data.personnes;
-    } else {
-      throw new Error("Format JSON inattendu");
+    const h1 = document.querySelector("h1");
+    if (h1) {
+      h1.textContent =
+        `Descendants de Lucien & Pauline (${personnes.length} personnes)`;
     }
 
-    console.log("Personnes chargées :", personnes.length);
-
-    // 🏷️ Titre
-    document.querySelector("h1").textContent =
-      `Descendants de Lucien & Pauline (${personnes.length} personnes)`;
-
-    // 🌳 AFFICHAGE DU PREMIER RANG
-    afficherPremierRang();
+    afficherRacine();
   })
   .catch(err => {
-    console.error("Erreur chargement :", err);
+    console.error("Erreur chargement JSON :", err);
     document.body.innerHTML +=
-      "<p style='color:red;font-weight:bold'>Erreur de chargement des données</p>";
+      "<p style='color:red;font-weight:bold'>Erreur de chargement de genealogie.json</p>";
   });
-
 
 // =========================
-// 🌿 FONCTIONS
+// AFFICHAGE RACINE
 // =========================
-
-function afficherPremierRang() {
-  const enfants = personnes.filter(p =>
-    p.pere === ID_LUCIEN && p.mere === ID_PAULINE
-  );
-
-  console.log("Enfants :", enfants);
-
-  const container = document.createElement("div");
-  container.id = "premier-rang";
-
-  const h2 = document.createElement("h2");
-  h2.textContent = "Enfants de Lucien & Pauline";
-  container.appendChild(h2);
-
-  const ul = document.createElement("ul");
-
-  enfants.forEach(e => {
-    const li = document.createElement("li");
-
-    const btn = document.createElement("button");
-    const naissance = e.naissance ?? "?";
-    const deces = e.deces ?? "";
-
-    btn.textContent = `${e.prenom} ${e.nom} (${naissance}–${deces})`;
-
-    // ✅ CLIC
-    btn.addEventListener("click", () => {
-      afficherDescendance(e.id);
-    });
-
-    li.appendChild(btn);
-    ul.appendChild(li);
-  });
-
-  container.appendChild(ul);
-  document.body.appendChild(container);
-}
-function afficherDescendance(idParent) {
-  console.log("Afficher descendance de", idParent);
-
-  // 🔄 Nettoyage ancien affichage
-  document.querySelectorAll(".descendance").forEach(e => e.remove());
+function afficherRacine() {
+  const container = document.getElementById("arbre");
+  container.innerHTML = "";
 
   const enfants = personnes.filter(p =>
-    p.pere === idParent || p.mere === idParent
+    p["ID_Père"] === ID_LUCIEN && p["ID_Mère"] === ID_PAULINE
   );
 
-  if (enfants.length === 0) return;
-
-  const div = document.createElement("div");
-  div.className = "descendance";
-
-  const ul = document.createElement("ul");
-
   enfants.forEach(e => {
-    const li = document.createElement("li");
-    li.textContent = `${e.prenom} ${e.nom}`;
-    ul.appendChild(li);
+    container.appendChild(creerNoeud(e));
   });
-
-  div.appendChild(ul);
-  document.body.appendChild(div);
 }
 
+// =========================
+// CRÉATION D’UN NŒUD CLIQUABLE
+// =========================
+function creerNoeud(personne) {
+  const wrapper = document.createElement("div");
+  wrapper.className = "noeud";
+
+  const bouton = document.createElement("button");
+  bouton.className = "personne";
+  bouton.textContent = formatPersonne(personne);
+
+  const enfantsDiv = document.createElement("div");
+  enfantsDiv.className = "enfants";
+  enfantsDiv.style.display = "none";
+
+  bouton.addEventListener("click", () => {
+    // Chargement paresseux (une seule fois)
+    if (enfantsDiv.childElementCount === 0) {
+      const enfants = personnes.filter(p =>
+        p["ID_Père"] === personne.ID || p["ID_Mère"] === personne.ID
+      );
+
+      enfants.forEach(enfant => {
+        enfantsDiv.appendChild(creerNoeud(enfant));
+      });
+    }
+
+    // Toggle afficher / masquer
+    enfantsDiv.style.display =
+      enfantsDiv.style.display === "none" ? "block" : "none";
+  });
+
+  wrapper.appendChild(bouton);
+  wrapper.appendChild(enfantsDiv);
+
+  return wrapper;
+}
+
+// =========================
+// FORMAT TEXTE PERSONNE
+// =========================
+function formatPersonne(p) {
+  const naissance = p["Naissance"] ?? "?";
+  const deces = p["Décès"] ? `–${p["Décès"]}` : "";
+  return `${p["Prénom"]} ${p["Nom"]} (${naissance}${deces})`;
+}

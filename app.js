@@ -78,3 +78,30 @@ function afficherPremierRang() {
   container.appendChild(ul);
   document.body.appendChild(container);
 }
+function afficherDescendance(idParent) {
+  console.log("Afficher descendance de", idParent);
+
+  // 🔄 Nettoyage ancien affichage
+  document.querySelectorAll(".descendance").forEach(e => e.remove());
+
+  const enfants = personnes.filter(p =>
+    p.pere === idParent || p.mere === idParent
+  );
+
+  if (enfants.length === 0) return;
+
+  const div = document.createElement("div");
+  div.className = "descendance";
+
+  const ul = document.createElement("ul");
+
+  enfants.forEach(e => {
+    const li = document.createElement("li");
+    li.textContent = `${e.prenom} ${e.nom}`;
+    ul.appendChild(li);
+  });
+
+  div.appendChild(ul);
+  document.body.appendChild(div);
+}
+

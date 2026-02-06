@@ -1,5 +1,5 @@
 /*************************************************
- *  GÉNÉALOGIE – ARBRE INFINI + CONJOINTS
+ *  GÉNÉALOGIE – ARBRE INFINI + CONJOINTS INTELLIGENTS
  *  Compatible genealogie.json (format actuel)
  *************************************************/
 
@@ -56,7 +56,7 @@ function chargerJSON() {
     .catch(err => {
       console.error("Erreur chargement JSON :", err);
       document.body.innerHTML +=
-        "<p style='color:red;font-weight:bold'>Erreur de chargement de genealogie.json</p>";
+        "<p style='color:red;font-weight:bold'>Erreur de chargement genealogie.json</p>";
     });
 }
 
@@ -95,20 +95,23 @@ function creerNoeud(personne) {
   nom.className = "name";
   nom.textContent = formatPersonne(personne);
 
-  // --- Conjoints ---
+  // --- Conjoints intelligents ---
   const conjointsDiv = document.createElement("div");
   conjointsDiv.className = "conjoint";
 
   if (Array.isArray(personne.conjoints) && personne.conjoints.length > 0) {
     personne.conjoints.forEach(idConjoint => {
       const conjoint = trouverPersonneParID(idConjoint);
-      if (conjoint) {
-        const div = document.createElement("div");
-        div.textContent =
-          `♡ ${conjoint["Prénom"]} ${conjoint["Nom"]}` +
-          formatDates(conjoint);
-        conjointsDiv.appendChild(div);
-      }
+      if (!conjoint) return;
+
+      const aEnfants = aEnfantsAvec(personne, conjoint);
+
+      const div = document.createElement("div");
+      div.textContent =
+        `♡ ${conjoint["Prénom"]} ${conjoint["Nom"]}` +
+        (aEnfants ? " — enfants" : " — sans descendance connue");
+
+      conjointsDiv.appendChild(div);
     });
   }
 
@@ -138,6 +141,16 @@ function creerNoeud(personne) {
 }
 
 // =========================
+// LOGIQUE CONJOINTS ↔ ENFANTS
+// =========================
+function aEnfantsAvec(personne, conjoint) {
+  return personnes.some(p =>
+    (p["ID_Père"] === personne.ID && p["ID_Mère"] === conjoint.ID) ||
+    (p["ID_Mère"] === personne.ID && p["ID_Père"] === conjoint.ID)
+  );
+}
+
+// =========================
 // UTILITAIRES
 // =========================
 function trouverPersonneParID(id) {
@@ -148,11 +161,4 @@ function formatPersonne(p) {
   const n = p.Naissance ?? "?";
   const d = p["Décès"] ? `–${p["Décès"]}` : "";
   return `${p["Prénom"]} ${p["Nom"]} (${n}${d})`;
-}
-
-function formatDates(p) {
-  if (!p.Naissance && !p["Décès"]) return "";
-  const n = p.Naissance ? p.Naissance : "?";
-  const d = p["Décès"] ? `–${p["Décès"]}` : "";
-  return ` (${n}${d})`;
 }

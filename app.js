@@ -42,20 +42,11 @@ fetch("genealogie_clean.json")
 // =========================
 
 function afficherPremierRang() {
-  const enfantsBruts = personnes.filter(p =>
-    p.ID_Père === ID_LUCIEN && p.ID_Mère === ID_PAULINE
+  const enfants = personnes.filter(p =>
+    p.pere === ID_LUCIEN && p.mere === ID_PAULINE
   );
 
-  // 🧹 Déduplication
-  const seen = new Set();
-  const enfants = enfantsBruts.filter(e => {
-    const key = `${e.Prénom}|${e.Nom}|${e.Naissance}`;
-    if (seen.has(key)) return false;
-    seen.add(key);
-    return true;
-  });
-
-  console.log("Enfants uniques :", enfants);
+  console.log("Enfants :", enfants);
 
   const container = document.createElement("div");
   container.id = "premier-rang";
@@ -68,9 +59,19 @@ function afficherPremierRang() {
 
   enfants.forEach(e => {
     const li = document.createElement("li");
-    const naissance = e.Naissance ?? "?";
-    const deces = e.Décès ?? "";
-    li.textContent = `${e.Prénom} ${e.Nom} (${naissance}–${deces})`;
+
+    const btn = document.createElement("button");
+    const naissance = e.naissance ?? "?";
+    const deces = e.deces ?? "";
+
+    btn.textContent = `${e.prenom} ${e.nom} (${naissance}–${deces})`;
+
+    // ✅ CLIC
+    btn.addEventListener("click", () => {
+      afficherDescendance(e.id);
+    });
+
+    li.appendChild(btn);
     ul.appendChild(li);
   });
 

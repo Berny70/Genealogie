@@ -4,7 +4,7 @@ let personnes = [];
 const ID_LUCIEN = 1;
 const ID_PAULINE = 2;
 
-fetch("genealogie_clean.json")
+fetch("genealogie.json")
   .then(r => {
     if (!r.ok) throw new Error("Erreur HTTP " + r.status);
     return r.json();

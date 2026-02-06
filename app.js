@@ -1,19 +1,35 @@
 /*************************************************
  *  GÉNÉALOGIE – ARBRE INFINI (clic sur clic)
+ *  Compatible genealogie.json (format actuel)
  *************************************************/
 
 let personnes = [];
 
+// Racines
 const ID_LUCIEN = 1;
 const ID_PAULINE = 2;
 
-// ⏳ ATTEND QUE LE HTML SOIT CHARGÉ
+// =========================
+// ATTENTE DOM
+// =========================
 document.addEventListener("DOMContentLoaded", () => {
+
+  // Boutons de navigation
+  document.getElementById("showTree").addEventListener("click", () => {
+    document.getElementById("tree").style.display = "block";
+    document.getElementById("searchView").style.display = "none";
+  });
+
+  document.getElementById("showSearch").addEventListener("click", () => {
+    document.getElementById("tree").style.display = "none";
+    document.getElementById("searchView").style.display = "block";
+  });
+
   chargerJSON();
 });
 
 // =========================
-// CHARGEMENT DU JSON
+// CHARGEMENT JSON
 // =========================
 function chargerJSON() {
   fetch("genealogie.json")
@@ -24,18 +40,15 @@ function chargerJSON() {
     .then(data => {
       personnes = data;
 
-      const h1 = document.querySelector("h1");
-      if (h1) {
-        h1.textContent =
-          `Descendants de Lucien & Pauline (${personnes.length} personnes)`;
-      }
+      document.querySelector("h1").textContent =
+        `Descendants de Lucien & Pauline (${personnes.length} personnes)`;
 
       afficherRacine();
     })
     .catch(err => {
       console.error("Erreur chargement JSON :", err);
       document.body.innerHTML +=
-        "<p style='color:red;font-weight:bold'>Erreur de chargement de genealogie.json</p>";
+        "<p style='color:red;font-weight:bold'>Erreur de chargement genealogie.json</p>";
     });
 }
 
@@ -46,11 +59,12 @@ function afficherRacine() {
   const container = document.getElementById("tree");
 
   if (!container) {
-    console.error("❌ <div id='arbre'> introuvable dans le HTML");
+    console.error("❌ <div id='tree'> introuvable dans le HTML");
     return;
   }
 
   container.innerHTML = "";
+  container.style.display = "block";
 
   const enfants = personnes.filter(p =>
     p["ID_Père"] === ID_LUCIEN && p["ID_Mère"] === ID_PAULINE
@@ -62,48 +76,42 @@ function afficherRacine() {
 }
 
 // =========================
-// CRÉATION D’UN NŒUD CLIQUABLE
+// CRÉATION NŒUD (ARBRE INFINI)
 // =========================
 function creerNoeud(personne) {
   const wrapper = document.createElement("div");
-  wrapper.className = "noeud";
+  wrapper.className = "person";
 
-  const bouton = document.createElement("button");
-  bouton.className = "personne";
-  bouton.textContent = formatPersonne(personne);
+  const nom = document.createElement("div");
+  nom.className = "name";
+  nom.textContent = formatPersonne(personne);
 
   const enfantsDiv = document.createElement("div");
-  enfantsDiv.className = "enfants";
-  enfantsDiv.style.display = "none";
+  enfantsDiv.className = "children";
 
-  bouton.addEventListener("click", () => {
-    // Chargement paresseux (une seule fois)
+  nom.addEventListener("click", () => {
     if (enfantsDiv.childElementCount === 0) {
       const enfants = personnes.filter(p =>
         p["ID_Père"] === personne.ID || p["ID_Mère"] === personne.ID
       );
 
-      enfants.forEach(enfant => {
-        enfantsDiv.appendChild(creerNoeud(enfant));
-      });
+      enfants.forEach(e => enfantsDiv.appendChild(creerNoeud(e)));
     }
 
-    // Toggle afficher / masquer
-    enfantsDiv.style.display =
-      enfantsDiv.style.display === "none" ? "block" : "none";
+    wrapper.classList.toggle("open");
   });
 
-  wrapper.appendChild(bouton);
+  wrapper.appendChild(nom);
   wrapper.appendChild(enfantsDiv);
 
   return wrapper;
 }
 
 // =========================
-// FORMAT TEXTE PERSONNE
+// FORMAT AFFICHAGE
 // =========================
 function formatPersonne(p) {
-  const naissance = p["Naissance"] ?? "?";
-  const deces = p["Décès"] ? `–${p["Décès"]}` : "";
-  return `${p["Prénom"]} ${p["Nom"]} (${naissance}${deces})`;
+  const n = p.Naissance ?? "?";
+  const d = p["Décès"] ? `–${p["Décès"]}` : "";
+  return `${p["Prénom"]} ${p["Nom"]} (${n}${d})`;
 }

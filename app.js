@@ -44,6 +44,12 @@ function chargerJSON() {
 // =========================
 function afficherRacine() {
   const container = document.getElementById("arbre");
+
+  if (!container) {
+    console.error("❌ <div id='arbre'> introuvable dans le HTML");
+    return;
+  }
+
   container.innerHTML = "";
 
   const enfants = personnes.filter(p =>

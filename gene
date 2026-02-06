@@ -1700,5 +1700,1465 @@
   "enfants": []
 },
 
+{
+  "ANTOINE_MARCHANT_1910": {
+    "id": "ANTOINE_MARCHANT_1910",
+    "prenom": "Antoine Ernest Joseph",
+    "nom": "MARCHANT",
+    "naissance": "1910",
+    "deces": "1992",
+    "parents": ["LUCIEN_MARCHANT_1873", "PAULINE_BIESWAL_1879"],
+    "conjoints": ["ELISABETH_BARROIS_1910"],
+    "enfants": [
+      "ELISABETH_MARCHANT_x",
+      "MARIE_MATHILDE_MARCHANT_x",
+      "ANNETTE_MARCHANT_x",
+      "GERARD_ANTOINE_MARCHANT_x",
+      "MARIE_CLAUDE_MARCHANT_1943",
+      "DOMINIQUE_MARCHANT_x"
+    ]
+  },
+
+  "ELISABETH_BARROIS_1910": {
+    "id": "ELISABETH_BARROIS_1910",
+    "prenom": "Élisabeth",
+    "nom": "BARROIS",
+    "naissance": "1910",
+    "deces": "2003",
+    "parents": [],
+    "conjoints": ["ANTOINE_MARCHANT_1910"],
+    "enfants": [
+      "ELISABETH_MARCHANT_x",
+      "MARIE_MATHILDE_MARCHANT_x",
+      "ANNETTE_MARCHANT_x",
+      "GERARD_ANTOINE_MARCHANT_x",
+      "MARIE_CLAUDE_MARCHANT_1943",
+      "DOMINIQUE_MARCHANT_x"
+    ]
+  },
+
+{
+  "ELISABETH_MARCHANT_x": {
+    "id": "ELISABETH_MARCHANT_x",
+    "prenom": "Élisabeth",
+    "nom": "MARCHANT",
+    "parents": ["ANTOINE_MARCHANT_1910", "ELISABETH_BARROIS_1910"],
+    "conjoints": ["GERARD_ABRIAL_x"],
+    "enfants": [
+      "CATHERINE_ABRIAL_x",
+      "FRANCOIS_ABRIAL_x",
+      "BENEDICTE_ABRIAL_x",
+      "ANNE_SOPHIE_ABRIAL_x"
+    ]
+  },
+
+  "GERARD_ABRIAL_x": {
+    "id": "GERARD_ABRIAL_x",
+    "prenom": "Gérard",
+    "nom": "ABRIAL",
+    "parents": [],
+    "conjoints": ["ELISABETH_MARCHANT_x"],
+    "enfants": [
+      "CATHERINE_ABRIAL_x",
+      "FRANCOIS_ABRIAL_x",
+      "BENEDICTE_ABRIAL_x",
+      "ANNE_SOPHIE_ABRIAL_x"
+    ]
+  },
+
+  "CATHERINE_ABRIAL_x": {
+    "id": "CATHERINE_ABRIAL_x",
+    "prenom": "Catherine",
+    "nom": "ABRIAL",
+    "parents": ["ELISABETH_MARCHANT_x", "GERARD_ABRIAL_x"],
+    "conjoints": ["ALAIN_MICHEL_x"],
+    "enfants": [
+      "MARIE_MICHEL_x",
+      "JUSTINE_MICHEL_x",
+      "CAMILLE_MICHEL_x",
+      "COLINE_MICHEL_x",
+      "MARGOT_MICHEL_x"
+    ]
+  },
+
+  "ALAIN_MICHEL_x": {
+    "id": "ALAIN_MICHEL_x",
+    "prenom": "Alain",
+    "nom": "MICHEL",
+    "parents": [],
+    "conjoints": ["CATHERINE_ABRIAL_x"],
+    "enfants": [
+      "MARIE_MICHEL_x",
+      "JUSTINE_MICHEL_x",
+      "CAMILLE_MICHEL_x",
+      "COLINE_MICHEL_x",
+      "MARGOT_MICHEL_x"
+    ]
+  },
+
+  "MARIE_MICHEL_x": {
+    "id": "MARIE_MICHEL_x",
+    "prenom": "Marie",
+    "nom": "MICHEL",
+    "parents": ["CATHERINE_ABRIAL_x", "ALAIN_MICHEL_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "JUSTINE_MICHEL_x": {
+    "id": "JUSTINE_MICHEL_x",
+    "prenom": "Justine",
+    "nom": "MICHEL",
+    "parents": ["CATHERINE_ABRIAL_x", "ALAIN_MICHEL_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "CAMILLE_MICHEL_x": {
+    "id": "CAMILLE_MICHEL_x",
+    "prenom": "Camille",
+    "nom": "MICHEL",
+    "parents": ["CATHERINE_ABRIAL_x", "ALAIN_MICHEL_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "COLINE_MICHEL_x": {
+    "id": "COLINE_MICHEL_x",
+    "prenom": "Coline",
+    "nom": "MICHEL",
+    "parents": ["CATHERINE_ABRIAL_x", "ALAIN_MICHEL_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "MARGOT_MICHEL_x": {
+    "id": "MARGOT_MICHEL_x",
+    "prenom": "Margot",
+    "nom": "MICHEL",
+    "parents": ["CATHERINE_ABRIAL_x", "ALAIN_MICHEL_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "FRANCOIS_ABRIAL_x": {
+    "id": "FRANCOIS_ABRIAL_x",
+    "prenom": "François",
+    "nom": "ABRIAL",
+    "parents": ["ELISABETH_MARCHANT_x", "GERARD_ABRIAL_x"],
+    "conjoints": ["CECILE_BORROMEE_x"],
+    "enfants": [
+      "MATHIEU_ABRIAL_x",
+      "CLEMENCE_ABRIAL_x",
+      "MARION_ABRIAL_x"
+    ]
+  },
+
+  "CECILE_BORROMEE_x": {
+    "id": "CECILE_BORROMEE_x",
+    "prenom": "Cécile",
+    "nom": "BORROMEE",
+    "parents": [],
+    "conjoints": ["FRANCOIS_ABRIAL_x"],
+    "enfants": [
+      "MATHIEU_ABRIAL_x",
+      "CLEMENCE_ABRIAL_x",
+      "MARION_ABRIAL_x"
+    ]
+  },
+
+  "MATHIEU_ABRIAL_x": {
+    "id": "MATHIEU_ABRIAL_x",
+    "prenom": "Mathieu",
+    "nom": "ABRIAL",
+    "parents": ["FRANCOIS_ABRIAL_x", "CECILE_BORROMEE_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "CLEMENCE_ABRIAL_x": {
+    "id": "CLEMENCE_ABRIAL_x",
+    "prenom": "Clémence",
+    "nom": "ABRIAL",
+    "parents": ["FRANCOIS_ABRIAL_x", "CECILE_BORROMEE_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "MARION_ABRIAL_x": {
+    "id": "MARION_ABRIAL_x",
+    "prenom": "Marion",
+    "nom": "ABRIAL",
+    "parents": ["FRANCOIS_ABRIAL_x", "CECILE_BORROMEE_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "BENEDICTE_ABRIAL_x": {
+    "id": "BENEDICTE_ABRIAL_x",
+    "prenom": "Bénédicte",
+    "nom": "ABRIAL",
+    "parents": ["ELISABETH_MARCHANT_x", "GERARD_ABRIAL_x"],
+    "conjoints": ["PATRICE_MACKE_x"],
+    "enfants": [
+      "APOLLINE_MACKE_x",
+      "NINON_MACKE_x",
+      "FANNY_MACKE_x"
+    ]
+  },
+
+  "PATRICE_MACKE_x": {
+    "id": "PATRICE_MACKE_x",
+    "prenom": "Patrice",
+    "nom": "MACKE",
+    "parents": [],
+    "conjoints": ["BENEDICTE_ABRIAL_x"],
+    "enfants": [
+      "APOLLINE_MACKE_x",
+      "NINON_MACKE_x",
+      "FANNY_MACKE_x"
+    ]
+  },
+
+  "APOLLINE_MACKE_x": {
+    "id": "APOLLINE_MACKE_x",
+    "prenom": "Apolline",
+    "nom": "MACKE",
+    "parents": ["BENEDICTE_ABRIAL_x", "PATRICE_MACKE_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "NINON_MACKE_x": {
+    "id": "NINON_MACKE_x",
+    "prenom": "Ninon",
+    "nom": "MACKE",
+    "parents": ["BENEDICTE_ABRIAL_x", "PATRICE_MACKE_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "FANNY_MACKE_x": {
+    "id": "FANNY_MACKE_x",
+    "prenom": "Fanny",
+    "nom": "MACKE",
+    "parents": ["BENEDICTE_ABRIAL_x", "PATRICE_MACKE_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "ANNE_SOPHIE_ABRIAL_x": {
+    "id": "ANNE_SOPHIE_ABRIAL_x",
+    "prenom": "Anne-Sophie",
+    "nom": "ABRIAL",
+    "parents": ["ELISABETH_MARCHANT_x", "GERARD_ABRIAL_x"],
+    "conjoints": ["LAURENT_CABANNES_x"],
+    "enfants": [
+      "VALENTINE_CABANNES_x",
+      "MANON_CABANNES_x",
+      "ELLIOT_CABANNES_x"
+    ]
+  },
+
+  "LAURENT_CABANNES_x": {
+    "id": "LAURENT_CABANNES_x",
+    "prenom": "Laurent",
+    "nom": "CABANNES",
+    "parents": [],
+    "conjoints": ["ANNE_SOPHIE_ABRIAL_x"],
+    "enfants": [
+      "VALENTINE_CABANNES_x",
+      "MANON_CABANNES_x",
+      "ELLIOT_CABANNES_x"
+    ]
+  },
+
+  "VALENTINE_CABANNES_x": {
+    "id": "VALENTINE_CABANNES_x",
+    "prenom": "Valentine",
+    "nom": "CABANNES",
+    "parents": ["ANNE_SOPHIE_ABRIAL_x", "LAURENT_CABANNES_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "MANON_CABANNES_x": {
+    "id": "MANON_CABANNES_x",
+    "prenom": "Manon",
+    "nom": "CABANNES",
+    "parents": ["ANNE_SOPHIE_ABRIAL_x", "LAURENT_CABANNES_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "ELLIOT_CABANNES_x": {
+    "id": "ELLIOT_CABANNES_x",
+    "prenom": "Elliot",
+    "nom": "CABANNES",
+    "parents": ["ANNE_SOPHIE_ABRIAL_x", "LAURENT_CABANNES_x"],
+    "conjoints": [],
+    "enfants": []
+  }
+},
+
+
+  "CATHERINE_ABRIAL_x": {
+    "id": "CATHERINE_ABRIAL_x",
+    "prenom": "Catherine",
+    "nom": "ABRIAL",
+    "parents": ["ELISABETH_MARCHANT_x", "GERARD_ABRIAL_x"],
+    "conjoints": ["ALAIN_MICHEL_x"],
+    "enfants": [
+      "MARIE_MICHEL_x",
+      "JUSTINE_MICHEL_x",
+      "CAMILLE_MICHEL_x",
+      "COLINE_MICHEL_x",
+      "MARGOT_MICHEL_x"
+    ]
+  },
+
+
+
+  // ───────────── MARIE MATHILDE MARCHANT → DEFOUR
+{
+  "MARIE_MATHILDE_MARCHANT_x": {
+    "id": "MARIE_MATHILDE_MARCHANT_x",
+    "prenom": "Marie Mathilde",
+    "nom": "MARCHANT",
+    "parents": ["ANTOINE_MARCHANT_1910", "ELISABETH_BARROIS_1910"],
+    "conjoints": ["JOSEPH_DEFOUR_1931"],
+    "enfants": [
+      "MICHEL_DEFOUR_x",
+      "BRUNO_DEFOUR_x",
+      "ANNE_DEFOUR_x",
+      "MARC_DEFOUR_x"
+    ]
+  },
+
+  "JOSEPH_DEFOUR_1931": {
+    "id": "JOSEPH_DEFOUR_1931",
+    "prenom": "Joseph",
+    "nom": "DEFOUR",
+    "naissance": "1931",
+    "deces": "2015",
+    "parents": [],
+    "conjoints": ["MARIE_MATHILDE_MARCHANT_x"],
+    "enfants": [
+      "MICHEL_DEFOUR_x",
+      "BRUNO_DEFOUR_x",
+      "ANNE_DEFOUR_x",
+      "MARC_DEFOUR_x"
+    ]
+  },
+
+  "MICHEL_DEFOUR_x": {
+    "id": "MICHEL_DEFOUR_x",
+    "prenom": "Michel",
+    "nom": "DEFOUR",
+    "parents": ["MARIE_MATHILDE_MARCHANT_x", "JOSEPH_DEFOUR_1931"],
+    "conjoints": ["HELENE_BOURRAT_x"],
+    "enfants": [
+      "MAXIME_DEFOUR_x",
+      "PAULINE_DEFOUR_x",
+      "CHARLOTTE_DEFOUR_x"
+    ]
+  },
+
+  "HELENE_BOURRAT_x": {
+    "id": "HELENE_BOURRAT_x",
+    "prenom": "Hélène",
+    "nom": "BOURRAT",
+    "parents": [],
+    "conjoints": ["MICHEL_DEFOUR_x"],
+    "enfants": [
+      "MAXIME_DEFOUR_x",
+      "PAULINE_DEFOUR_x",
+      "CHARLOTTE_DEFOUR_x"
+    ]
+  },
+
+  "MAXIME_DEFOUR_x": {
+    "id": "MAXIME_DEFOUR_x",
+    "prenom": "Maxime",
+    "nom": "DEFOUR",
+    "parents": ["MICHEL_DEFOUR_x", "HELENE_BOURRAT_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "PAULINE_DEFOUR_x": {
+    "id": "PAULINE_DEFOUR_x",
+    "prenom": "Pauline",
+    "nom": "DEFOUR",
+    "parents": ["MICHEL_DEFOUR_x", "HELENE_BOURRAT_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "CHARLOTTE_DEFOUR_x": {
+    "id": "CHARLOTTE_DEFOUR_x",
+    "prenom": "Charlotte",
+    "nom": "DEFOUR",
+    "parents": ["MICHEL_DEFOUR_x", "HELENE_BOURRAT_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "BRUNO_DEFOUR_x": {
+    "id": "BRUNO_DEFOUR_x",
+    "prenom": "Bruno",
+    "nom": "DEFOUR",
+    "parents": ["MARIE_MATHILDE_MARCHANT_x", "JOSEPH_DEFOUR_1931"],
+    "conjoints": ["SIGOLENE_CHIRRAT_x"],
+    "enfants": [
+      "MATHILDE_DEFOUR_x",
+      "MARIANNE_DEFOUR_x"
+    ]
+  },
+
+  "SIGOLENE_CHIRRAT_x": {
+    "id": "SIGOLENE_CHIRRAT_x",
+    "prenom": "Sigolène",
+    "nom": "CHIRRAT",
+    "parents": [],
+    "conjoints": ["BRUNO_DEFOUR_x"],
+    "enfants": [
+      "MATHILDE_DEFOUR_x",
+      "MARIANNE_DEFOUR_x"
+    ]
+  },
+
+  "MATHILDE_DEFOUR_x": {
+    "id": "MATHILDE_DEFOUR_x",
+    "prenom": "Mathilde",
+    "nom": "DEFOUR",
+    "parents": ["BRUNO_DEFOUR_x", "SIGOLENE_CHIRRAT_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "MARIANNE_DEFOUR_x": {
+    "id": "MARIANNE_DEFOUR_x",
+    "prenom": "Marianne",
+    "nom": "DEFOUR",
+    "parents": ["BRUNO_DEFOUR_x", "SIGOLENE_CHIRRAT_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "ANNE_DEFOUR_x": {
+    "id": "ANNE_DEFOUR_x",
+    "prenom": "Anne",
+    "nom": "DEFOUR",
+    "parents": ["MARIE_MATHILDE_MARCHANT_x", "JOSEPH_DEFOUR_1931"],
+    "conjoints": ["JEAN_MARIE_CAILLAT_x"],
+    "enfants": [
+      "LUCIE_CAILLAT_x",
+      "ETIENNE_CAILLAT_x",
+      "LOUIS_CAILLAT_x",
+      "EMILE_CAILLAT_x"
+    ]
+  },
+
+  "JEAN_MARIE_CAILLAT_x": {
+    "id": "JEAN_MARIE_CAILLAT_x",
+    "prenom": "Jean-Marie",
+    "nom": "CAILLAT",
+    "parents": [],
+    "conjoints": ["ANNE_DEFOUR_x"],
+    "enfants": [
+      "LUCIE_CAILLAT_x",
+      "ETIENNE_CAILLAT_x",
+      "LOUIS_CAILLAT_x",
+      "EMILE_CAILLAT_x"
+    ]
+  },
+
+  "LUCIE_CAILLAT_x": {
+    "id": "LUCIE_CAILLAT_x",
+    "prenom": "Lucie",
+    "nom": "CAILLAT",
+    "parents": ["ANNE_DEFOUR_x", "JEAN_MARIE_CAILLAT_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "ETIENNE_CAILLAT_x": {
+    "id": "ETIENNE_CAILLAT_x",
+    "prenom": "Étienne",
+    "nom": "CAILLAT",
+    "parents": ["ANNE_DEFOUR_x", "JEAN_MARIE_CAILLAT_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "LOUIS_CAILLAT_x": {
+    "id": "LOUIS_CAILLAT_x",
+    "prenom": "Louis",
+    "nom": "CAILLAT",
+    "parents": ["ANNE_DEFOUR_x", "JEAN_MARIE_CAILLAT_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "EMILE_CAILLAT_x": {
+    "id": "EMILE_CAILLAT_x",
+    "prenom": "Émile",
+    "nom": "CAILLAT",
+    "parents": ["ANNE_DEFOUR_x", "JEAN_MARIE_CAILLAT_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "MARC_DEFOUR_x": {
+    "id": "MARC_DEFOUR_x",
+    "prenom": "Marc",
+    "nom": "DEFOUR",
+    "parents": ["MARIE_MATHILDE_MARCHANT_x", "JOSEPH_DEFOUR_1931"],
+    "conjoints": ["NATHALIE_CHAFFARD_x"],
+    "enfants": [
+      "FRANCOIS_REGIS_DEFOUR_x",
+      "HUGUES_DEFOUR_x",
+      "JEAN_BAPTISTE_DEFOUR_x",
+      "CHARLES_DEFOUR_x"
+    ]
+  },
+
+  "NATHALIE_CHAFFARD_x": {
+    "id": "NATHALIE_CHAFFARD_x",
+    "prenom": "Nathalie",
+    "nom": "CHAFFARD",
+    "parents": [],
+    "conjoints": ["MARC_DEFOUR_x"],
+    "enfants": [
+      "FRANCOIS_REGIS_DEFOUR_x",
+      "HUGUES_DEFOUR_x",
+      "JEAN_BAPTISTE_DEFOUR_x",
+      "CHARLES_DEFOUR_x"
+    ]
+  },
+
+  "FRANCOIS_REGIS_DEFOUR_x": {
+    "id": "FRANCOIS_REGIS_DEFOUR_x",
+    "prenom": "François-Régis",
+    "nom": "DEFOUR",
+    "parents": ["MARC_DEFOUR_x", "NATHALIE_CHAFFARD_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "HUGUES_DEFOUR_x": {
+    "id": "HUGUES_DEFOUR_x",
+    "prenom": "Hugues",
+    "nom": "DEFOUR",
+    "parents": ["MARC_DEFOUR_x", "NATHALIE_CHAFFARD_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "JEAN_BAPTISTE_DEFOUR_x": {
+    "id": "JEAN_BAPTISTE_DEFOUR_x",
+    "prenom": "Jean-Baptiste",
+    "nom": "DEFOUR",
+    "parents": ["MARC_DEFOUR_x", "NATHALIE_CHAFFARD_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "CHARLES_DEFOUR_x": {
+    "id": "CHARLES_DEFOUR_x",
+    "prenom": "Charles",
+    "nom": "DEFOUR",
+    "parents": ["MARC_DEFOUR_x", "NATHALIE_CHAFFARD_x"],
+    "conjoints": [],
+    "enfants": []
+  }
+},
+
+
+  // ───────────── ANNETTE MARCHANT → DEVILLE
+{
+  "ANNETTE_MARCHANT_x": {
+    "id": "ANNETTE_MARCHANT_x",
+    "prenom": "Annette",
+    "nom": "MARCHANT",
+    "parents": ["ANTOINE_MARCHANT_1910", "ELISABETH_BARROIS_1910"],
+    "conjoints": ["ROBERT_DEVILLE_1931"],
+    "enfants": [
+      "ODILE_DEVILLE_x",
+      "VINCENT_DEVILLE_x",
+      "LOUIS_DEVILLE_x",
+      "COLETTE_DEVILLE_1970",
+      "REMI_DEVILLE_x"
+    ]
+  },
+
+  "ROBERT_DEVILLE_1931": {
+    "id": "ROBERT_DEVILLE_1931",
+    "prenom": "Robert",
+    "nom": "DEVILLE",
+    "naissance": "1931",
+    "deces": "2012",
+    "parents": [],
+    "conjoints": ["ANNETTE_MARCHANT_x"],
+    "enfants": [
+      "ODILE_DEVILLE_x",
+      "VINCENT_DEVILLE_x",
+      "LOUIS_DEVILLE_x",
+      "COLETTE_DEVILLE_1970",
+      "REMI_DEVILLE_x"
+    ]
+  },
+
+  // ───────────── Odile DEVILLE → BERARD
+  "ODILE_DEVILLE_x": {
+    "id": "ODILE_DEVILLE_x",
+    "prenom": "Odile",
+    "nom": "DEVILLE",
+    "parents": ["ANNETTE_MARCHANT_x", "ROBERT_DEVILLE_1931"],
+    "conjoints": ["HENRI_BERARD_x"],
+    "enfants": [
+      "PIERRE_HENRI_BERARD_x",
+      "ANNE_BERARD_x",
+      "MARIE_BERARD_x",
+      "FRANCOIS_BERARD_x"
+    ]
+  },
+
+  "HENRI_BERARD_x": {
+    "id": "HENRI_BERARD_x",
+    "prenom": "Henri",
+    "nom": "BERARD",
+    "parents": [],
+    "conjoints": ["ODILE_DEVILLE_x"],
+    "enfants": [
+      "PIERRE_HENRI_BERARD_x",
+      "ANNE_BERARD_x",
+      "MARIE_BERARD_x",
+      "FRANCOIS_BERARD_x"
+    ]
+  },
+
+  "PIERRE_HENRI_BERARD_x": {
+    "id": "PIERRE_HENRI_BERARD_x",
+    "prenom": "Pierre-Henri",
+    "nom": "BERARD",
+    "parents": ["ODILE_DEVILLE_x", "HENRI_BERARD_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "ANNE_BERARD_x": {
+    "id": "ANNE_BERARD_x",
+    "prenom": "Anne",
+    "nom": "BERARD",
+    "parents": ["ODILE_DEVILLE_x", "HENRI_BERARD_x"],
+    "conjoints": ["BRUNO_DE_FRANQUEVILLE_x"],
+    "enfants": [
+      "SIXTINE_DE_FRANQUEVILLE_x",
+      "VICTOIRE_DE_FRANQUEVILLE_x",
+      "PHILIPPINE_DE_FRANQUEVILLE_x"
+    ]
+  },
+
+  "BRUNO_DE_FRANQUEVILLE_x": {
+    "id": "BRUNO_DE_FRANQUEVILLE_x",
+    "prenom": "Bruno",
+    "nom": "DE FRANQUEVILLE",
+    "parents": [],
+    "conjoints": ["ANNE_BERARD_x"],
+    "enfants": [
+      "SIXTINE_DE_FRANQUEVILLE_x",
+      "VICTOIRE_DE_FRANQUEVILLE_x",
+      "PHILIPPINE_DE_FRANQUEVILLE_x"
+    ]
+  },
+
+  "SIXTINE_DE_FRANQUEVILLE_x": {
+    "id": "SIXTINE_DE_FRANQUEVILLE_x",
+    "prenom": "Sixtine",
+    "nom": "DE FRANQUEVILLE",
+    "parents": ["ANNE_BERARD_x", "BRUNO_DE_FRANQUEVILLE_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "VICTOIRE_DE_FRANQUEVILLE_x": {
+    "id": "VICTOIRE_DE_FRANQUEVILLE_x",
+    "prenom": "Victoire",
+    "nom": "DE FRANQUEVILLE",
+    "parents": ["ANNE_BERARD_x", "BRUNO_DE_FRANQUEVILLE_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "PHILIPPINE_DE_FRANQUEVILLE_x": {
+    "id": "PHILIPPINE_DE_FRANQUEVILLE_x",
+    "prenom": "Philippine",
+    "nom": "DE FRANQUEVILLE",
+    "parents": ["ANNE_BERARD_x", "BRUNO_DE_FRANQUEVILLE_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "MARIE_BERARD_x": {
+    "id": "MARIE_BERARD_x",
+    "prenom": "Marie",
+    "nom": "BERARD",
+    "parents": ["ODILE_DEVILLE_x", "HENRI_BERARD_x"],
+    "conjoints": ["THIBAULT_PARNAUDEAU_x"],
+    "enfants": [
+      "FOUCAULT_PARNAUDEAU_x",
+      "HILAIRE_PARNAUDEAU_x"
+    ]
+  },
+
+  "THIBAULT_PARNAUDEAU_x": {
+    "id": "THIBAULT_PARNAUDEAU_x",
+    "prenom": "Thibault",
+    "nom": "PARNAUDEAU",
+    "parents": [],
+    "conjoints": ["MARIE_BERARD_x"],
+    "enfants": [
+      "FOUCAULT_PARNAUDEAU_x",
+      "HILAIRE_PARNAUDEAU_x"
+    ]
+  },
+
+  "FOUCAULT_PARNAUDEAU_x": {
+    "id": "FOUCAULT_PARNAUDEAU_x",
+    "prenom": "Foucault",
+    "nom": "PARNAUDEAU",
+    "parents": ["MARIE_BERARD_x", "THIBAULT_PARNAUDEAU_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "HILAIRE_PARNAUDEAU_x": {
+    "id": "HILAIRE_PARNAUDEAU_x",
+    "prenom": "Hilaire",
+    "nom": "PARNAUDEAU",
+    "parents": ["MARIE_BERARD_x", "THIBAULT_PARNAUDEAU_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "FRANCOIS_BERARD_x": {
+    "id": "FRANCOIS_BERARD_x",
+    "prenom": "François",
+    "nom": "BERARD",
+    "parents": ["ODILE_DEVILLE_x", "HENRI_BERARD_x"],
+    "conjoints": ["ALIX_PERRET_DU_CRAY_x"],
+    "enfants": []
+  },
+
+  // ───────────── Vincent DEVILLE (2 unions)
+  "VINCENT_DEVILLE_x": {
+    "id": "VINCENT_DEVILLE_x",
+    "prenom": "Vincent",
+    "nom": "DEVILLE",
+    "parents": ["ANNETTE_MARCHANT_x", "ROBERT_DEVILLE_1931"],
+    "conjoints": ["AGNES_THIOLLIER_x", "CECILE_MATAUD_x"],
+    "enfants": [
+      "CAROLINE_DEVILLE_x",
+      "PAUL_DEVILLE_x",
+      "CLEMENCE_DEVILLE_x",
+      "THEO_DEVILLE_x",
+      "TITOUAN_DEVILLE_x"
+    ]
+  },
+
+  "AGNES_THIOLLIER_x": {
+    "id": "AGNES_THIOLLIER_x",
+    "prenom": "Agnès",
+    "nom": "THIOLLIER",
+    "parents": [],
+    "conjoints": ["VINCENT_DEVILLE_x"],
+    "enfants": [
+      "CAROLINE_DEVILLE_x",
+      "PAUL_DEVILLE_x",
+      "CLEMENCE_DEVILLE_x"
+    ]
+  },
+
+  "CECILE_MATAUD_x": {
+    "id": "CECILE_MATAUD_x",
+    "prenom": "Cécile",
+    "nom": "MATAUD",
+    "parents": [],
+    "conjoints": ["VINCENT_DEVILLE_x"],
+    "enfants": [
+      "THEO_DEVILLE_x",
+      "TITOUAN_DEVILLE_x"
+    ]
+  },
+
+  "CAROLINE_DEVILLE_x": {
+    "id": "CAROLINE_DEVILLE_x",
+    "prenom": "Caroline",
+    "nom": "DEVILLE",
+    "parents": ["VINCENT_DEVILLE_x", "AGNES_THIOLLIER_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "PAUL_DEVILLE_x": {
+    "id": "PAUL_DEVILLE_x",
+    "prenom": "Paul",
+    "nom": "DEVILLE",
+    "parents": ["VINCENT_DEVILLE_x", "AGNES_THIOLLIER_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "CLEMENCE_DEVILLE_x": {
+    "id": "CLEMENCE_DEVILLE_x",
+    "prenom": "Clémence",
+    "nom": "DEVILLE",
+    "parents": ["VINCENT_DEVILLE_x", "AGNES_THIOLLIER_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "THEO_DEVILLE_x": {
+    "id": "THEO_DEVILLE_x",
+    "prenom": "Théo",
+    "nom": "DEVILLE",
+    "parents": ["VINCENT_DEVILLE_x", "CECILE_MATAUD_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "TITOUAN_DEVILLE_x": {
+    "id": "TITOUAN_DEVILLE_x",
+    "prenom": "Titouan",
+    "nom": "DEVILLE",
+    "parents": ["VINCENT_DEVILLE_x", "CECILE_MATAUD_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  // ───────────── Louis DEVILLE
+  "LOUIS_DEVILLE_x": {
+    "id": "LOUIS_DEVILLE_x",
+    "prenom": "Louis",
+    "nom": "DEVILLE",
+    "parents": ["ANNETTE_MARCHANT_x", "ROBERT_DEVILLE_1931"],
+    "conjoints": ["SANDRINA_TARBARDEL_x"],
+    "enfants": [
+      "THOMAS_DEVILLE_x",
+      "JEAN_BENOIT_DEVILLE_x",
+      "MARC_ANTOINE_DEVILLE_x",
+      "AUGUSTIN_DEVILLE_x",
+      "LE_THI_TAM_MARIE_DEVILLE_x"
+    ]
+  },
+
+  "LE_THI_TAM_MARIE_DEVILLE_x": {
+    "id": "LE_THI_TAM_MARIE_DEVILLE_x",
+    "prenom": "Le Thi Tam, Marie",
+    "nom": "DEVILLE",
+    "parents": ["LOUIS_DEVILLE_x", "SANDRINA_TARBARDEL_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "COLETTE_DEVILLE_1970": {
+    "id": "COLETTE_DEVILLE_1970",
+    "prenom": "Colette",
+    "nom": "DEVILLE",
+    "naissance": "1970",
+    "deces": "1970",
+    "parents": ["ANNETTE_MARCHANT_x", "ROBERT_DEVILLE_1931"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  // ───────────── Rémi DEVILLE
+  "REMI_DEVILLE_x": {
+    "id": "REMI_DEVILLE_x",
+    "prenom": "Rémi",
+    "nom": "DEVILLE",
+    "parents": ["ANNETTE_MARCHANT_x", "ROBERT_DEVILLE_1931"],
+    "conjoints": ["MARIE_VIOLAINE_BOURGY_x"],
+    "enfants": [
+      "GREGOIRE_DEVILLE_x",
+      "PRISCILLE_DEVILLE_x",
+      "ALIX_DEVILLE_x",
+      "HUMBELINE_DEVILLE_x",
+      "SIXTE_DEVILLE_x"
+    ]
+  }
+},
+
+
+  // ───────────── GÉRARD ANTOINE MARCHANT → CARDON
+{
+  "GERARD_ANTOINE_MARCHANT_x": {
+    "id": "GERARD_ANTOINE_MARCHANT_x",
+    "prenom": "Gérard Antoine",
+    "nom": "MARCHANT",
+    "parents": ["ANTOINE_MARCHANT_1910", "ELISABETH_BARROIS_1910"],
+    "conjoints": ["GENEVIEVE_CARDON_x"],
+    "enfants": [
+      "CLAIRE_MARCHANT_x",
+      "EDOUARD_MARCHANT_x"
+    ]
+  },
+
+  "GENEVIEVE_CARDON_x": {
+    "id": "GENEVIEVE_CARDON_x",
+    "prenom": "Geneviève",
+    "nom": "CARDON",
+    "parents": [],
+    "conjoints": ["GERARD_ANTOINE_MARCHANT_x"],
+    "enfants": [
+      "CLAIRE_MARCHANT_x",
+      "EDOUARD_MARCHANT_x"
+    ]
+  },
+
+  "CLAIRE_MARCHANT_x": {
+    "id": "CLAIRE_MARCHANT_x",
+    "prenom": "Claire",
+    "nom": "MARCHANT",
+    "parents": ["GERARD_ANTOINE_MARCHANT_x", "GENEVIEVE_CARDON_x"],
+    "conjoints": ["PASCAL_SAVOURE_x"],
+    "enfants": [
+      "ARNAUD_SAVOURE_x",
+      "DOMITILLE_SAVOURE_x",
+      "MARIN_SAVOURE_x"
+    ]
+  },
+
+  "PASCAL_SAVOURE_x": {
+    "id": "PASCAL_SAVOURE_x",
+    "prenom": "Pascal",
+    "nom": "SAVOURE",
+    "parents": [],
+    "conjoints": ["CLAIRE_MARCHANT_x"],
+    "enfants": [
+      "ARNAUD_SAVOURE_x",
+      "DOMITILLE_SAVOURE_x",
+      "MARIN_SAVOURE_x"
+    ]
+  },
+
+  "ARNAUD_SAVOURE_x": {
+    "id": "ARNAUD_SAVOURE_x",
+    "prenom": "Arnaud",
+    "nom": "SAVOURE",
+    "parents": ["CLAIRE_MARCHANT_x", "PASCAL_SAVOURE_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "DOMITILLE_SAVOURE_x": {
+    "id": "DOMITILLE_SAVOURE_x",
+    "prenom": "Domitille",
+    "nom": "SAVOURE",
+    "parents": ["CLAIRE_MARCHANT_x", "PASCAL_SAVOURE_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "MARIN_SAVOURE_x": {
+    "id": "MARIN_SAVOURE_x",
+    "prenom": "Marin",
+    "nom": "SAVOURE",
+    "parents": ["CLAIRE_MARCHANT_x", "PASCAL_SAVOURE_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "EDOUARD_MARCHANT_x": {
+    "id": "EDOUARD_MARCHANT_x",
+    "prenom": "Édouard",
+    "nom": "MARCHANT",
+    "parents": ["GERARD_ANTOINE_MARCHANT_x", "GENEVIEVE_CARDON_x"],
+    "conjoints": ["SABINE_ZELLER_x"],
+    "enfants": [
+      "HILAIRE_MARCHANT_x",
+      "AMICIE_MARCHANT_x",
+      "GERAUD_MARCHANT_x",
+      "PHILOMENE_MARCHANT_x",
+      "FEREOL_MARCHANT_x"
+    ]
+  },
+
+  "SABINE_ZELLER_x": {
+    "id": "SABINE_ZELLER_x",
+    "prenom": "Sabine",
+    "nom": "ZELLER",
+    "parents": [],
+    "conjoints": ["EDOUARD_MARCHANT_x"],
+    "enfants": [
+      "HILAIRE_MARCHANT_x",
+      "AMICIE_MARCHANT_x",
+      "GERAUD_MARCHANT_x",
+      "PHILOMENE_MARCHANT_x",
+      "FEREOL_MARCHANT_x"
+    ]
+  },
+
+  "HILAIRE_MARCHANT_x": {
+    "id": "HILAIRE_MARCHANT_x",
+    "prenom": "Hilaire",
+    "nom": "MARCHANT",
+    "parents": ["EDOUARD_MARCHANT_x", "SABINE_ZELLER_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "AMICIE_MARCHANT_x": {
+    "id": "AMICIE_MARCHANT_x",
+    "prenom": "Amicie",
+    "nom": "MARCHANT",
+    "parents": ["EDOUARD_MARCHANT_x", "SABINE_ZELLER_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "GERAUD_MARCHANT_x": {
+    "id": "GERAUD_MARCHANT_x",
+    "prenom": "Géraud",
+    "nom": "MARCHANT",
+    "parents": ["EDOUARD_MARCHANT_x", "SABINE_ZELLER_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "PHILOMENE_MARCHANT_x": {
+    "id": "PHILOMENE_MARCHANT_x",
+    "prenom": "Philomène",
+    "nom": "MARCHANT",
+    "parents": ["EDOUARD_MARCHANT_x", "SABINE_ZELLER_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "FEREOL_MARCHANT_x": {
+    "id": "FEREOL_MARCHANT_x",
+    "prenom": "Féréol",
+    "nom": "MARCHANT",
+    "parents": ["EDOUARD_MARCHANT_x", "SABINE_ZELLER_x"],
+    "conjoints": [],
+    "enfants": []
+  }
+},
+
+  // ───────────── MARIE-CLAUDE MARCHANT → FLAYELLE
+{
+  "MARIE_CLAUDE_MARCHANT_1943": {
+    "id": "MARIE_CLAUDE_MARCHANT_1943",
+    "prenom": "Marie-Claude",
+    "nom": "MARCHANT",
+    "naissance": "1943",
+    "deces": "2004",
+    "parents": ["ANTOINE_MARCHANT_1910", "ELISABETH_BARROIS_1910"],
+    "conjoints": ["ANDRE_FLAYELLE_1940"],
+    "enfants": [
+      "NICOLAS_FLAYELLE_x",
+      "CHRISTINE_FLAYELLE_x",
+      "JEAN_BAPTISTE_FLAYELLE_x"
+    ]
+  },
+
+  "ANDRE_FLAYELLE_1940": {
+    "id": "ANDRE_FLAYELLE_1940",
+    "prenom": "André",
+    "nom": "FLAYELLE de XANDIN",
+    "naissance": "1940",
+    "deces": "2000",
+    "parents": [],
+    "conjoints": ["MARIE_CLAUDE_MARCHANT_1943"],
+    "enfants": [
+      "NICOLAS_FLAYELLE_x",
+      "CHRISTINE_FLAYELLE_x",
+      "JEAN_BAPTISTE_FLAYELLE_x"
+    ]
+  },
+
+  "NICOLAS_FLAYELLE_x": {
+    "id": "NICOLAS_FLAYELLE_x",
+    "prenom": "Nicolas",
+    "nom": "FLAYELLE de XANDIN",
+    "parents": ["MARIE_CLAUDE_MARCHANT_1943", "ANDRE_FLAYELLE_1940"],
+    "conjoints": ["MARIE_DE_WATRIGAN_x"],
+    "enfants": [
+      "ANTOINE_FLAYELLE_XANDIN_x",
+      "ALIX_FLAYELLE_XANDIN_x",
+      "THIBAULT_FLAYELLE_XANDIN_x",
+      "EDOUARD_FLAYELLE_XANDIN_x"
+    ]
+  },
+
+  "MARIE_DE_WATRIGAN_x": {
+    "id": "MARIE_DE_WATRIGAN_x",
+    "prenom": "Marie",
+    "nom": "de WATRIGAN",
+    "parents": [],
+    "conjoints": ["NICOLAS_FLAYELLE_x"],
+    "enfants": [
+      "ANTOINE_FLAYELLE_XANDIN_x",
+      "ALIX_FLAYELLE_XANDIN_x",
+      "THIBAULT_FLAYELLE_XANDIN_x",
+      "EDOUARD_FLAYELLE_XANDIN_x"
+    ]
+  },
+
+  "ANTOINE_FLAYELLE_XANDIN_x": {
+    "id": "ANTOINE_FLAYELLE_XANDIN_x",
+    "prenom": "Antoine",
+    "nom": "FLAYELLE de XANDIN",
+    "parents": ["NICOLAS_FLAYELLE_x", "MARIE_DE_WATRIGAN_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "ALIX_FLAYELLE_XANDIN_x": {
+    "id": "ALIX_FLAYELLE_XANDIN_x",
+    "prenom": "Alix",
+    "nom": "FLAYELLE de XANDIN",
+    "parents": ["NICOLAS_FLAYELLE_x", "MARIE_DE_WATRIGAN_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "THIBAULT_FLAYELLE_XANDIN_x": {
+    "id": "THIBAULT_FLAYELLE_XANDIN_x",
+    "prenom": "Thibault",
+    "nom": "FLAYELLE de XANDIN",
+    "parents": ["NICOLAS_FLAYELLE_x", "MARIE_DE_WATRIGAN_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "EDOUARD_FLAYELLE_XANDIN_x": {
+    "id": "EDOUARD_FLAYELLE_XANDIN_x",
+    "prenom": "Édouard",
+    "nom": "FLAYELLE de XANDIN",
+    "parents": ["NICOLAS_FLAYELLE_x", "MARIE_DE_WATRIGAN_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "CHRISTINE_FLAYELLE_x": {
+    "id": "CHRISTINE_FLAYELLE_x",
+    "prenom": "Christine",
+    "nom": "FLAYELLE de XANDIN",
+    "parents": ["MARIE_CLAUDE_MARCHANT_1943", "ANDRE_FLAYELLE_1940"],
+    "conjoints": ["HERVE_LE_BOUTEILLER_DES_HARIES_x"],
+    "enfants": [
+      "GUILLAUME_LE_BOUTEILLER_x",
+      "AUDE_LE_BOUTEILLER_x",
+      "BENOIT_LE_BOUTEILLER_x",
+      "CONSTANCE_LE_BOUTEILLER_x"
+    ]
+  },
+
+  "HERVE_LE_BOUTEILLER_DES_HARIES_x": {
+    "id": "HERVE_LE_BOUTEILLER_DES_HARIES_x",
+    "prenom": "Hervé",
+    "nom": "Le BOUTEILLER DES HARIES",
+    "parents": [],
+    "conjoints": ["CHRISTINE_FLAYELLE_x"],
+    "enfants": [
+      "GUILLAUME_LE_BOUTEILLER_x",
+      "AUDE_LE_BOUTEILLER_x",
+      "BENOIT_LE_BOUTEILLER_x",
+      "CONSTANCE_LE_BOUTEILLER_x"
+    ]
+  },
+
+  "GUILLAUME_LE_BOUTEILLER_x": {
+    "id": "GUILLAUME_LE_BOUTEILLER_x",
+    "prenom": "Guillaume",
+    "nom": "Le BOUTEILLER DES HARIES",
+    "parents": ["CHRISTINE_FLAYELLE_x", "HERVE_LE_BOUTEILLER_DES_HARIES_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "AUDE_LE_BOUTEILLER_x": {
+    "id": "AUDE_LE_BOUTEILLER_x",
+    "prenom": "Aude",
+    "nom": "Le BOUTEILLER DES HARIES",
+    "parents": ["CHRISTINE_FLAYELLE_x", "HERVE_LE_BOUTEILLER_DES_HARIES_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "BENOIT_LE_BOUTEILLER_x": {
+    "id": "BENOIT_LE_BOUTEILLER_x",
+    "prenom": "Benoît",
+    "nom": "Le BOUTEILLER DES HARIES",
+    "parents": ["CHRISTINE_FLAYELLE_x", "HERVE_LE_BOUTEILLER_DES_HARIES_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "CONSTANCE_LE_BOUTEILLER_x": {
+    "id": "CONSTANCE_LE_BOUTEILLER_x",
+    "prenom": "Constance",
+    "nom": "Le BOUTEILLER DES HARIES",
+    "parents": ["CHRISTINE_FLAYELLE_x", "HERVE_LE_BOUTEILLER_DES_HARIES_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "JEAN_BAPTISTE_FLAYELLE_x": {
+    "id": "JEAN_BAPTISTE_FLAYELLE_x",
+    "prenom": "Jean-Baptiste",
+    "nom": "FLAYELLE de XANDIN",
+    "parents": ["MARIE_CLAUDE_MARCHANT_1943", "ANDRE_FLAYELLE_1940"],
+    "conjoints": ["CLEMENCE_GIRAL_x"],
+    "enfants": [
+      "LOUIS_FLAYELLE_XANDIN_x",
+      "VIOLAINE_FLAYELLE_XANDIN_x",
+      "ALEXIS_FLAYELLE_XANDIN_x"
+    ]
+  },
+
+  "CLEMENCE_GIRAL_x": {
+    "id": "CLEMENCE_GIRAL_x",
+    "prenom": "Clémence",
+    "nom": "GIRAL",
+    "parents": [],
+    "conjoints": ["JEAN_BAPTISTE_FLAYELLE_x"],
+    "enfants": [
+      "LOUIS_FLAYELLE_XANDIN_x",
+      "VIOLAINE_FLAYELLE_XANDIN_x",
+      "ALEXIS_FLAYELLE_XANDIN_x"
+    ]
+  },
+
+  "LOUIS_FLAYELLE_XANDIN_x": {
+    "id": "LOUIS_FLAYELLE_XANDIN_x",
+    "prenom": "Louis",
+    "nom": "FLAYELLE de XANDIN",
+    "parents": ["JEAN_BAPTISTE_FLAYELLE_x", "CLEMENCE_GIRAL_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "VIOLAINE_FLAYELLE_XANDIN_x": {
+    "id": "VIOLAINE_FLAYELLE_XANDIN_x",
+    "prenom": "Violaine",
+    "nom": "FLAYELLE de XANDIN",
+    "parents": ["JEAN_BAPTISTE_FLAYELLE_x", "CLEMENCE_GIRAL_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "ALEXIS_FLAYELLE_XANDIN_x": {
+    "id": "ALEXIS_FLAYELLE_XANDIN_x",
+    "prenom": "Alexis",
+    "nom": "FLAYELLE de XANDIN",
+    "parents": ["JEAN_BAPTISTE_FLAYELLE_x", "CLEMENCE_GIRAL_x"],
+    "conjoints": [],
+    "enfants": []
+  }
+},
+
+  // ───────────── DOMINIQUE MARCHANT
+{
+  "DOMINIQUE_MARCHANT_x": {
+    "id": "DOMINIQUE_MARCHANT_x",
+    "prenom": "Dominique",
+    "nom": "MARCHANT",
+    "parents": ["ANTOINE_MARCHANT_1910", "ELISABETH_BARROIS_1910"],
+    "conjoints": ["MARTINE_LEQUAI_x"],
+    "enfants": [
+      "PAULINE_MARCHANT_x",
+      "ANTOINE_MARCHANT_2_x",
+      "HELENE_MARCHANT_x",
+      "BENOIT_MARCHANT_x"
+    ]
+  },
+
+  "MARTINE_LEQUAI_x": {
+    "id": "MARTINE_LEQUAI_x",
+    "prenom": "Martine",
+    "nom": "LEQUAI",
+    "parents": [],
+    "conjoints": ["DOMINIQUE_MARCHANT_x"],
+    "enfants": [
+      "PAULINE_MARCHANT_x",
+      "ANTOINE_MARCHANT_2_x",
+      "HELENE_MARCHANT_x",
+      "BENOIT_MARCHANT_x"
+    ]
+  },
+
+  "PAULINE_MARCHANT_x": {
+    "id": "PAULINE_MARCHANT_x",
+    "prenom": "Pauline",
+    "nom": "MARCHANT",
+    "parents": ["DOMINIQUE_MARCHANT_x", "MARTINE_LEQUAI_x"],
+    "conjoints": ["FRANCOIS_PIERRE_x"],
+    "enfants": [
+      "PAUL_EMILE_PIERRE_x",
+      "LOUISE_PIERRE_x",
+      "PRUDENCE_PIERRE_x",
+      "JOSEPH_PIERRE_x"
+    ]
+  },
+
+  "FRANCOIS_PIERRE_x": {
+    "id": "FRANCOIS_PIERRE_x",
+    "prenom": "François",
+    "nom": "PIERRE",
+    "parents": [],
+    "conjoints": ["PAULINE_MARCHANT_x"],
+    "enfants": [
+      "PAUL_EMILE_PIERRE_x",
+      "LOUISE_PIERRE_x",
+      "PRUDENCE_PIERRE_x",
+      "JOSEPH_PIERRE_x"
+    ]
+  },
+
+  "PAUL_EMILE_PIERRE_x": {
+    "id": "PAUL_EMILE_PIERRE_x",
+    "prenom": "Paul-Émile",
+    "nom": "PIERRE",
+    "parents": ["PAULINE_MARCHANT_x", "FRANCOIS_PIERRE_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "LOUISE_PIERRE_x": {
+    "id": "LOUISE_PIERRE_x",
+    "prenom": "Louise",
+    "nom": "PIERRE",
+    "parents": ["PAULINE_MARCHANT_x", "FRANCOIS_PIERRE_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "PRUDENCE_PIERRE_x": {
+    "id": "PRUDENCE_PIERRE_x",
+    "prenom": "Prudence",
+    "nom": "PIERRE",
+    "parents": ["PAULINE_MARCHANT_x", "FRANCOIS_PIERRE_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "JOSEPH_PIERRE_x": {
+    "id": "JOSEPH_PIERRE_x",
+    "prenom": "Joseph",
+    "nom": "PIERRE",
+    "parents": ["PAULINE_MARCHANT_x", "FRANCOIS_PIERRE_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "ANTOINE_MARCHANT_2_x": {
+    "id": "ANTOINE_MARCHANT_2_x",
+    "prenom": "Antoine",
+    "nom": "MARCHANT",
+    "parents": ["DOMINIQUE_MARCHANT_x", "MARTINE_LEQUAI_x"],
+    "conjoints": ["MARJORIE_LAUVERGEON_x"],
+    "enfants": [
+      "ELISE_MARCHANT_x",
+      "CLEMENT_MARCHANT_x"
+    ]
+  },
+
+  "MARJORIE_LAUVERGEON_x": {
+    "id": "MARJORIE_LAUVERGEON_x",
+    "prenom": "Marjorie",
+    "nom": "LAUVERGEON",
+    "parents": [],
+    "conjoints": ["ANTOINE_MARCHANT_2_x"],
+    "enfants": [
+      "ELISE_MARCHANT_x",
+      "CLEMENT_MARCHANT_x"
+    ]
+  },
+
+  "ELISE_MARCHANT_x": {
+    "id": "ELISE_MARCHANT_x",
+    "prenom": "Élise",
+    "nom": "MARCHANT",
+    "parents": ["ANTOINE_MARCHANT_2_x", "MARJORIE_LAUVERGEON_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "CLEMENT_MARCHANT_x": {
+    "id": "CLEMENT_MARCHANT_x",
+    "prenom": "Clément",
+    "nom": "MARCHANT",
+    "parents": ["ANTOINE_MARCHANT_2_x", "MARJORIE_LAUVERGEON_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "HELENE_MARCHANT_x": {
+    "id": "HELENE_MARCHANT_x",
+    "prenom": "Hélène",
+    "nom": "MARCHANT",
+    "parents": ["DOMINIQUE_MARCHANT_x", "MARTINE_LEQUAI_x"],
+    "conjoints": ["CESAR_DE_BRITO_x"],
+    "enfants": [
+      "AUGUSTIN_DE_BRITO_x",
+      "CAMILLE_DE_BRITO_x",
+      "VICTOR_DE_BRITO_x"
+    ]
+  },
+
+  "CESAR_DE_BRITO_x": {
+    "id": "CESAR_DE_BRITO_x",
+    "prenom": "César",
+    "nom": "de BRITO",
+    "parents": [],
+    "conjoints": ["HELENE_MARCHANT_x"],
+    "enfants": [
+      "AUGUSTIN_DE_BRITO_x",
+      "CAMILLE_DE_BRITO_x",
+      "VICTOR_DE_BRITO_x"
+    ]
+  },
+
+  "AUGUSTIN_DE_BRITO_x": {
+    "id": "AUGUSTIN_DE_BRITO_x",
+    "prenom": "Augustin",
+    "nom": "de BRITO",
+    "parents": ["HELENE_MARCHANT_x", "CESAR_DE_BRITO_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "CAMILLE_DE_BRITO_x": {
+    "id": "CAMILLE_DE_BRITO_x",
+    "prenom": "Camille",
+    "nom": "de BRITO",
+    "parents": ["HELENE_MARCHANT_x", "CESAR_DE_BRITO_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "VICTOR_DE_BRITO_x": {
+    "id": "VICTOR_DE_BRITO_x",
+    "prenom": "Victor",
+    "nom": "de BRITO",
+    "parents": ["HELENE_MARCHANT_x", "CESAR_DE_BRITO_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "BENOIT_MARCHANT_x": {
+    "id": "BENOIT_MARCHANT_x",
+    "prenom": "Benoît",
+    "nom": "MARCHANT",
+    "parents": ["DOMINIQUE_MARCHANT_x", "MARTINE_LEQUAI_x"],
+    "conjoints": [],
+    "enfants": []
+  }
+},
+
 
 

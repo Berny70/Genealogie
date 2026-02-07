@@ -1,164 +1,50 @@
-/*************************************************
- *  GÉNÉALOGIE – ARBRE INFINI + CONJOINTS INTELLIGENTS
- *  Compatible genealogie.json (format actuel)
- *************************************************/
+let DATA = {};
 
-let personnes = [];
+fetch("gene.json")
+  .then(r => r.json())
+  .then(d => {
+    DATA = d;
+    renderList(Object.values(DATA));
+  });
 
-// Racines
-const ID_LUCIEN = 1;
-const ID_PAULINE = 2;
+const listDiv = document.getElementById("list");
+const personDiv = document.getElementById("person");
+const searchInput = document.getElementById("search");
 
-// =========================
-// ATTENTE DOM
-// =========================
-document.addEventListener("DOMContentLoaded", () => {
-
-  // Boutons de navigation
-  const btnTree = document.getElementById("showTree");
-  const btnSearch = document.getElementById("showSearch");
-
-  if (btnTree && btnSearch) {
-    btnTree.addEventListener("click", () => {
-      document.getElementById("tree").style.display = "block";
-      document.getElementById("searchView").style.display = "none";
-    });
-
-    btnSearch.addEventListener("click", () => {
-      document.getElementById("tree").style.display = "none";
-      document.getElementById("searchView").style.display = "block";
-    });
-  }
-
-  chargerJSON();
+searchInput.addEventListener("input", e => {
+  const q = e.target.value.toLowerCase();
+  const people = Object.values(DATA).filter(p =>
+    (p.nom || "").toLowerCase().includes(q) ||
+    (p.prenom || "").toLowerCase().includes(q)
+  );
+  renderList(people);
 });
 
-// =========================
-// CHARGEMENT JSON
-// =========================
-function chargerJSON() {
-  fetch("genealogie.json")
-    .then(r => {
-      if (!r.ok) throw new Error("Erreur HTTP " + r.status);
-      return r.json();
-    })
-    .then(data => {
-      personnes = data;
-
-      const h1 = document.querySelector("h1");
-      if (h1) {
-        h1.textContent =
-          `Descendants de Lucien & Pauline (${personnes.length} personnes)`;
-      }
-
-      afficherRacine();
-    })
-    .catch(err => {
-      console.error("Erreur chargement JSON :", err);
-      document.body.innerHTML +=
-        "<p style='color:red;font-weight:bold'>Erreur de chargement genealogie.json</p>";
-    });
+function renderList(people) {
+  listDiv.innerHTML = people.map(p => `
+    <div class="item" onclick="showPerson('${p.id}')">
+      ${p.prenom || ""} ${p.nom || ""}
+    </div>
+  `).join("");
 }
 
-// =========================
-// AFFICHAGE RACINE
-// =========================
-function afficherRacine() {
-  const container = document.getElementById("tree");
+function showPerson(id) {
+  const p = DATA[id];
+  if (!p) return;
 
-  if (!container) {
-    console.error("❌ <div id='tree'> introuvable dans le HTML");
-    return;
-  }
+  const link = (ids) =>
+    ids.map(i =>
+      DATA[i]
+        ? `<span onclick="showPerson('${i}')">${DATA[i].prenom} ${DATA[i].nom}</span>`
+        : ""
+    ).join(", ");
 
-  container.innerHTML = "";
-  container.style.display = "block";
-
-  const enfants = personnes.filter(p =>
-    p["ID_Père"] === ID_LUCIEN && p["ID_Mère"] === ID_PAULINE
-  );
-
-  enfants.forEach(e => {
-    container.appendChild(creerNoeud(e));
-  });
-}
-
-// =========================
-// CRÉATION D’UN NŒUD (PERSONNE)
-// =========================
-function creerNoeud(personne) {
-  const wrapper = document.createElement("div");
-  wrapper.className = "person";
-
-  // Nom principal (cliquable)
-  const nom = document.createElement("div");
-  nom.className = "name";
-  nom.textContent = formatPersonne(personne);
-
-  // --- Conjoints intelligents ---
-  const conjointsDiv = document.createElement("div");
-  conjointsDiv.className = "conjoint";
-
-  if (Array.isArray(personne.conjoints) && personne.conjoints.length > 0) {
-    personne.conjoints.forEach(idConjoint => {
-      const conjoint = trouverPersonneParID(idConjoint);
-      if (!conjoint) return;
-
-      const aEnfants = aEnfantsAvec(personne, conjoint);
-
-      const div = document.createElement("div");
-      div.textContent =
-        `♡ ${conjoint["Prénom"]} ${conjoint["Nom"]}` +
-        (aEnfants ? " — enfants" : " — sans descendance connue");
-
-      conjointsDiv.appendChild(div);
-    });
-  }
-
-  // --- Enfants ---
-  const enfantsDiv = document.createElement("div");
-  enfantsDiv.className = "children";
-
-  nom.addEventListener("click", () => {
-    if (enfantsDiv.childElementCount === 0) {
-      const enfants = personnes.filter(p =>
-        p["ID_Père"] === personne.ID || p["ID_Mère"] === personne.ID
-      );
-
-      enfants.forEach(e => enfantsDiv.appendChild(creerNoeud(e)));
-    }
-
-    wrapper.classList.toggle("open");
-  });
-
-  wrapper.appendChild(nom);
-  if (conjointsDiv.childElementCount > 0) {
-    wrapper.appendChild(conjointsDiv);
-  }
-  wrapper.appendChild(enfantsDiv);
-
-  return wrapper;
-}
-
-// =========================
-// LOGIQUE CONJOINTS ↔ ENFANTS
-// =========================
-function aEnfantsAvec(personne, conjoint) {
-  return personnes.some(p =>
-    (p["ID_Père"] === personne.ID && p["ID_Mère"] === conjoint.ID) ||
-    (p["ID_Mère"] === personne.ID && p["ID_Père"] === conjoint.ID)
-  );
-}
-
-// =========================
-// UTILITAIRES
-// =========================
-function trouverPersonneParID(id) {
-  return personnes.find(p => p.ID === id);
-}
-
-function formatPersonne(p) {
-  const n = p.Naissance ?? "?";
-  const d = p["Décès"] ? `–${p["Décès"]}` : "";
-  return `${p["Prénom"]} ${p["Nom"]} (${n}${d})`;
+  personDiv.innerHTML = `
+    <h2>${p.prenom} ${p.nom}</h2>
+    <p>Naissance : ${p.naissance || "?"}</p>
+    <p>Décès : ${p.deces || ""}</p>
+    <p><strong>Parents :</strong> ${link(p.parents || [])}</p>
+    <p><strong>Conjoints :</strong> ${link(p.conjoints || [])}</p>
+    <p><strong>Enfants :</strong> ${link(p.enfants || [])}</p>
+  `;
 }

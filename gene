@@ -3159,6 +3159,598 @@
     "enfants": []
   }
 },
+{
+  "RENE_MARCHANT_1912": {
+    "id": "RENE_MARCHANT_1912",
+    "prenom": "René Henri Marie",
+    "nom": "MARCHANT",
+    "naissance": "1912",
+    "deces": "1977",
+    "parents": ["LUCIEN_MARCHANT_1873", "PAULINE_BIESWAL_1879"],
+    "conjoints": ["JEANNETTE_WATTEL_1914"],
+    "enfants": [
+      "LUC_MARCHANT_1937",
+      "MARIE_FRANCE_MARCHANT_1939",
+      "RENE_MARCHANT_1941"
+    ]
+  },
+
+  "JEANNETTE_WATTEL_1914": {
+    "id": "JEANNETTE_WATTEL_1914",
+    "prenom": "Jeannette",
+    "nom": "WATTEL",
+    "naissance": "1914",
+    "deces": "2014",
+    "parents": [],
+    "conjoints": ["RENE_MARCHANT_1912"],
+    "enfants": [
+      "LUC_MARCHANT_1937",
+      "MARIE_FRANCE_MARCHANT_1939",
+      "RENE_MARCHANT_1941"
+    ]
+  },
+
+  // ───────────── Luc MARCHANT → ALEXANDRE
+  "LUC_MARCHANT_1937": {
+    "id": "LUC_MARCHANT_1937",
+    "prenom": "Luc",
+    "nom": "MARCHANT",
+    "naissance": "1937",
+    "deces": "1993",
+    "parents": ["RENE_MARCHANT_1912", "JEANNETTE_WATTEL_1914"],
+    "conjoints": ["HUGUETTE_MICHELE_ALEXANDRE_x"],
+    "enfants": [
+      "ISABELLE_MARCHANT_x",
+      "JEAN_LUC_MARCHANT_x",
+      "ERIC_MARCHANT_x",
+      "LAURENCE_MARCHANT_x"
+    ]
+  },
+
+  "HUGUETTE_MICHELE_ALEXANDRE_x": {
+    "id": "HUGUETTE_MICHELE_ALEXANDRE_x",
+    "prenom": "Huguette Michèle",
+    "nom": "ALEXANDRE",
+    "parents": [],
+    "conjoints": ["LUC_MARCHANT_1937"],
+    "enfants": [
+      "ISABELLE_MARCHANT_x",
+      "JEAN_LUC_MARCHANT_x",
+      "ERIC_MARCHANT_x",
+      "LAURENCE_MARCHANT_x"
+    ]
+  },
+
+  "ISABELLE_MARCHANT_x": {
+    "id": "ISABELLE_MARCHANT_x",
+    "prenom": "Isabelle",
+    "nom": "MARCHANT",
+    "parents": ["LUC_MARCHANT_1937", "HUGUETTE_MICHELE_ALEXANDRE_x"],
+    "conjoints": [],
+    "enfants": ["FRANCOIS_MARCHANT_x"]
+  },
+
+  "FRANCOIS_MARCHANT_x": {
+    "id": "FRANCOIS_MARCHANT_x",
+    "prenom": "François",
+    "nom": "MARCHANT",
+    "parents": ["ISABELLE_MARCHANT_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "JEAN_LUC_MARCHANT_x": {
+    "id": "JEAN_LUC_MARCHANT_x",
+    "prenom": "Jean-Luc",
+    "nom": "MARCHANT",
+    "parents": ["LUC_MARCHANT_1937", "HUGUETTE_MICHELE_ALEXANDRE_x"],
+    "conjoints": ["NICOLE_NOORENBERGHE_x"],
+    "enfants": ["ELODIE_MARCHANT_x"]
+  },
+
+  "NICOLE_NOORENBERGHE_x": {
+    "id": "NICOLE_NOORENBERGHE_x",
+    "prenom": "Nicole",
+    "nom": "NOORENBERGHE",
+    "parents": [],
+    "conjoints": ["JEAN_LUC_MARCHANT_x"],
+    "enfants": ["ELODIE_MARCHANT_x"]
+  },
+
+  "ELODIE_MARCHANT_x": {
+    "id": "ELODIE_MARCHANT_x",
+    "prenom": "Élodie",
+    "nom": "MARCHANT",
+    "parents": ["JEAN_LUC_MARCHANT_x", "NICOLE_NOORENBERGHE_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "ERIC_MARCHANT_x": {
+    "id": "ERIC_MARCHANT_x",
+    "prenom": "Éric",
+    "nom": "MARCHANT",
+    "parents": ["LUC_MARCHANT_1937", "HUGUETTE_MICHELE_ALEXANDRE_x"],
+    "conjoints": ["CELINE_CHAPIRON_x"],
+    "enfants": [
+      "PAUL_MARCHANT_x",
+      "LOUISE_MARCHANT_x",
+      "JEANNE_MARCHANT_x"
+    ]
+  },
+
+  "CELINE_CHAPIRON_x": {
+    "id": "CELINE_CHAPIRON_x",
+    "prenom": "Céline",
+    "nom": "CHAPIRON",
+    "parents": [],
+    "conjoints": ["ERIC_MARCHANT_x"],
+    "enfants": [
+      "PAUL_MARCHANT_x",
+      "LOUISE_MARCHANT_x",
+      "JEANNE_MARCHANT_x"
+    ]
+  },
+
+  "PAUL_MARCHANT_x": {
+    "id": "PAUL_MARCHANT_x",
+    "prenom": "Paul",
+    "nom": "MARCHANT",
+    "parents": ["ERIC_MARCHANT_x", "CELINE_CHAPIRON_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "LOUISE_MARCHANT_x": {
+    "id": "LOUISE_MARCHANT_x",
+    "prenom": "Louise",
+    "nom": "MARCHANT",
+    "parents": ["ERIC_MARCHANT_x", "CELINE_CHAPIRON_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "JEANNE_MARCHANT_x": {
+    "id": "JEANNE_MARCHANT_x",
+    "prenom": "Jeanne",
+    "nom": "MARCHANT",
+    "parents": ["ERIC_MARCHANT_x", "CELINE_CHAPIRON_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "LAURENCE_MARCHANT_x": {
+    "id": "LAURENCE_MARCHANT_x",
+    "prenom": "Laurence",
+    "nom": "MARCHANT",
+    "parents": ["LUC_MARCHANT_1937", "HUGUETTE_MICHELE_ALEXANDRE_x"],
+    "conjoints": ["JEAN_LUC_DAVROUT_x"],
+    "enfants": [
+      "SYLVAIN_DAVROUT_x",
+      "BENOIT_DAVROUT_x"
+    ]
+  },
+
+  "JEAN_LUC_DAVROUT_x": {
+    "id": "JEAN_LUC_DAVROUT_x",
+    "prenom": "Jean-Luc",
+    "nom": "DAVROUT",
+    "parents": [],
+    "conjoints": ["LAURENCE_MARCHANT_x"],
+    "enfants": [
+      "SYLVAIN_DAVROUT_x",
+      "BENOIT_DAVROUT_x"
+    ]
+  },
+
+  "SYLVAIN_DAVROUT_x": {
+    "id": "SYLVAIN_DAVROUT_x",
+    "prenom": "Sylvain",
+    "nom": "DAVROUT",
+    "parents": ["LAURENCE_MARCHANT_x", "JEAN_LUC_DAVROUT_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "BENOIT_DAVROUT_x": {
+    "id": "BENOIT_DAVROUT_x",
+    "prenom": "Benoît",
+    "nom": "DAVROUT",
+    "parents": ["LAURENCE_MARCHANT_x", "JEAN_LUC_DAVROUT_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  // ───────────── Marie-France MARCHANT → MAEGHT
+  "MARIE_FRANCE_MARCHANT_1939": {
+    "id": "MARIE_FRANCE_MARCHANT_1939",
+    "prenom": "Marie-France",
+    "nom": "MARCHANT",
+    "naissance": "1939",
+    "deces": "1997",
+    "parents": ["RENE_MARCHANT_1912", "JEANNETTE_WATTEL_1914"],
+    "conjoints": ["XAVIER_MAEGHT_x"],
+    "enfants": [
+      "NATHALIE_MAEGHT_x",
+      "ALEXANDRE_MAEGHT_x"
+    ]
+  },
+
+  "XAVIER_MAEGHT_x": {
+    "id": "XAVIER_MAEGHT_x",
+    "prenom": "Xavier",
+    "nom": "MAEGHT",
+    "deces": "1998",
+    "parents": [],
+    "conjoints": ["MARIE_FRANCE_MARCHANT_1939"],
+    "enfants": [
+      "NATHALIE_MAEGHT_x",
+      "ALEXANDRE_MAEGHT_x"
+    ]
+  },
+
+  "NATHALIE_MAEGHT_x": {
+    "id": "NATHALIE_MAEGHT_x",
+    "prenom": "Nathalie",
+    "nom": "MAEGHT",
+    "parents": ["MARIE_FRANCE_MARCHANT_1939", "XAVIER_MAEGHT_x"],
+    "conjoints": [],
+    "enfants": [
+      "VIANNET_x",
+      "GAUTHIER_x",
+      "ROMANE_x"
+    ]
+  },
+
+  "VIANNET_x": {
+    "id": "VIANNET_x",
+    "prenom": "Viannet",
+    "parents": ["NATHALIE_MAEGHT_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "GAUTHIER_x": {
+    "id": "GAUTHIER_x",
+    "prenom": "Gauthier",
+    "parents": ["NATHALIE_MAEGHT_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "ROMANE_x": {
+    "id": "ROMANE_x",
+    "prenom": "Romane",
+    "parents": ["NATHALIE_MAEGHT_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "ALEXANDRE_MAEGHT_x": {
+    "id": "ALEXANDRE_MAEGHT_x",
+    "prenom": "Alexandre",
+    "nom": "MAEGHT",
+    "parents": ["MARIE_FRANCE_MARCHANT_1939", "XAVIER_MAEGHT_x"],
+    "conjoints": [],
+    "enfants": [
+      "VICTOR_MAEGHT_x",
+      "EDGARD_MAEGHT_x"
+    ]
+  },
+
+  "VICTOR_MAEGHT_x": {
+    "id": "VICTOR_MAEGHT_x",
+    "prenom": "Victor",
+    "nom": "MAEGHT",
+    "parents": ["ALEXANDRE_MAEGHT_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  "EDGARD_MAEGHT_x": {
+    "id": "EDGARD_MAEGHT_x",
+    "prenom": "Edgard",
+    "nom": "MAEGHT",
+    "parents": ["ALEXANDRE_MAEGHT_x"],
+    "conjoints": [],
+    "enfants": []
+  },
+
+  // ───────────── René MARCHANT (1941–1974)
+  "RENE_MARCHANT_1941": {
+    "id": "RENE_MARCHANT_1941",
+    "prenom": "René",
+    "nom": "MARCHANT",
+    "naissance": "1941",
+    "deces": "1974",
+    "parents": ["RENE_MARCHANT_1912", "JEANNETTE_WATTEL_1914"],
+    "conjoints": ["DANIELLE_MAHIEUX_1942"],
+    "enfants": []
+  },
+
+  "DANIELLE_MAHIEUX_1942": {
+    "id": "DANIELLE_MAHIEUX_1942",
+    "prenom": "Danielle",
+    "nom": "MAHIEUX",
+    "naissance": "1942",
+    "deces": "2007",
+    "parents": [],
+    "conjoints": ["RENE_MARCHANT_1941"],
+    "enfants": []
+  }
+},
+{
+  "GENEVIEVE_MARCHANT_1916": {
+    "id": "GENEVIEVE_MARCHANT_1916",
+    "prenom": "Geneviève Marie Paule",
+    "nom": "MARCHANT",
+    "surnom": "Ginette",
+    "naissance": "1916",
+    "deces": "2015",
+    "parents": ["LUCIEN_MARCHANT_1873", "PAULINE_BIESWAL_1879"],
+    "conjoints": ["RENE_BARROIS_x"],
+    "enfants": [
+      "CHRISTOPHE_BARROIS_x",
+      "LOUIS_BARROIS_x",
+      "PIERRE_BARROIS_x",
+      "BERNARD_BARROIS_x"
+    ]
+  },
+
+  "RENE_BARROIS_x": {
+    "id": "RENE_BARROIS_x",
+    "prenom": "René",
+    "nom": "BARROIS",
+    "parents": [],
+    "conjoints": ["GENEVIEVE_MARCHANT_1916"],
+    "enfants": [
+      "CHRISTOPHE_BARROIS_x",
+      "LOUIS_BARROIS_x",
+      "PIERRE_BARROIS_x",
+      "BERNARD_BARROIS_x"
+    ]
+  },
+
+  // ───────────── Christophe BARROIS → RONFARD
+  "CHRISTOPHE_BARROIS_x": {
+    "id": "CHRISTOPHE_BARROIS_x",
+    "prenom": "Christophe",
+    "nom": "BARROIS",
+    "parents": ["GENEVIEVE_MARCHANT_1916", "RENE_BARROIS_x"],
+    "conjoints": ["MARIE_RONFARD_x"],
+    "enfants": [
+      "JEROME_BARROIS_x",
+      "ANTOINE_BARROIS_x",
+      "LUCIE_BARROIS_x",
+      "MARINE_BARROIS_x"
+    ]
+  },
+
+  "JEROME_BARROIS_x": {
+    "id": "JEROME_BARROIS_x",
+    "prenom": "Jérôme",
+    "nom": "BARROIS",
+    "parents": ["CHRISTOPHE_BARROIS_x", "MARIE_RONFARD_x"],
+    "conjoints": ["NGA_x"],
+    "enfants": ["PAUL_BARROIS_x"]
+  },
+
+  "ANTOINE_BARROIS_x": {
+    "id": "ANTOINE_BARROIS_x",
+    "prenom": "Antoine",
+    "nom": "BARROIS",
+    "parents": ["CHRISTOPHE_BARROIS_x", "MARIE_RONFARD_x"],
+    "conjoints": [],
+    "enfants": [
+      "PACOME_BARROIS_x",
+      "CASTILLE_BARROIS_x"
+    ]
+  },
+
+  "LUCIE_BARROIS_x": {
+    "id": "LUCIE_BARROIS_x",
+    "prenom": "Lucie",
+    "nom": "BARROIS",
+    "parents": ["CHRISTOPHE_BARROIS_x", "MARIE_RONFARD_x"],
+    "conjoints": ["ANTHONY_PIETTE_x"],
+    "enfants": [
+      "SOUMAELA_PIETTE_x",
+      "YAEL_PIETTE_x",
+      "ZACHARY_PIETTE_x"
+    ]
+  },
+
+  "MARINE_BARROIS_x": {
+    "id": "MARINE_BARROIS_x",
+    "prenom": "Marine",
+    "nom": "BARROIS",
+    "parents": ["CHRISTOPHE_BARROIS_x", "MARIE_RONFARD_x"],
+    "conjoints": ["JEAN_MICHEL_DUPLAN_x"],
+    "enfants": ["JULES_BARROIS_x"]
+  },
+
+  // ───────────── Louis BARROIS → MATHIEU
+  "LOUIS_BARROIS_x": {
+    "id": "LOUIS_BARROIS_x",
+    "prenom": "Louis",
+    "nom": "BARROIS",
+    "parents": ["GENEVIEVE_MARCHANT_1916", "RENE_BARROIS_x"],
+    "conjoints": ["DOMINIQUE_MATHIEU_x"],
+    "enfants": [
+      "NICOLAS_BARROIS_x",
+      "MELANIE_BARROIS_x",
+      "CECILE_BARROIS_x"
+    ]
+  },
+
+"NICOLAS_BARROIS_x": {
+  "id": "NICOLAS_BARROIS_x",
+  "prenom": "Nicolas",
+  "nom": "BARROIS",
+  "parents": ["LOUIS_BARROIS_x", "DOMINIQUE_MATHIEU_x"],
+  "conjoints": [
+    "AURELIE_BAZIN_x",
+    "STEPHANIE_KATLAMA_x"
+  ],
+  "enfants": [
+    "JEANNE_BARROIS_x",
+    "LOUISE_BARROIS_x",
+    "CLEMENT_BARROIS_x"
+  ]
+},
+
+"STEPHANIE_KATLAMA_x": {
+  "id": "STEPHANIE_KATLAMA_x",
+  "prenom": "Stéphanie",
+  "nom": "KATLAMA",
+  "parents": [],
+  "conjoints": ["NICOLAS_BARROIS_x"],
+  "enfants": ["CLEMENT_BARROIS_x"]
+},
+
+"CLEMENT_BARROIS_x": {
+  "id": "CLEMENT_BARROIS_x",
+  "prenom": "Clément",
+  "nom": "BARROIS",
+  "parents": ["NICOLAS_BARROIS_x", "STEPHANIE_KATLAMA_x"],
+  "conjoints": [],
+  "enfants": []
+},
+
+
+  "MELANIE_BARROIS_x": {
+    "id": "MELANIE_BARROIS_x",
+    "prenom": "Mélanie",
+    "nom": "BARROIS",
+    "parents": ["LOUIS_BARROIS_x", "DOMINIQUE_MATHIEU_x"],
+    "conjoints": ["THIBAULT_CAILLE_x"],
+    "enfants": [
+      "TRISTAN_CAILLE_x",
+      "BAPTISTE_CAILLE_x"
+    ]
+  },
+
+  "CECILE_BARROIS_x": {
+    "id": "CECILE_BARROIS_x",
+    "prenom": "Cécile",
+    "nom": "BARROIS",
+    "parents": ["LOUIS_BARROIS_x", "DOMINIQUE_MATHIEU_x"],
+    "conjoints": ["OLIVIER_VOURCH_x"],
+    "enfants": []
+  },
+
+  // ───────────── Pierre BARROIS → LALOUX
+"PIERRE_BARROIS_x": {
+  "id": "PIERRE_BARROIS_x",
+  "prenom": "Pierre",
+  "nom": "BARROIS",
+  "parents": ["GENEVIEVE_MARCHANT_1916", "RENE_BARROIS_x"],
+  "conjoints": ["MARIE_LALOUX_x"],
+  "enfants": [
+    "JULIEN_BARROIS_x",
+    "THOMAS_BARROIS_x",
+    "COLIN_BARROIS_x",
+    "ADRIEN_BARROIS_x"
+  ]
+},
+
+"JULIEN_BARROIS_x": {
+  "id": "JULIEN_BARROIS_x",
+  "prenom": "Julien",
+  "nom": "BARROIS",
+  "parents": ["PIERRE_BARROIS_x", "MARIE_LALOUX_x"],
+  "conjoints": ["MARIANNE_x"],
+  "enfants": [
+    "SAMUEL_BARROIS_x",
+    "SOLINE_BARROIS_x",
+    "SIMON_BARROIS_x"
+  ]
+},
+
+"THOMAS_BARROIS_x": {
+  "id": "THOMAS_BARROIS_x",
+  "prenom": "Thomas",
+  "nom": "BARROIS",
+  "parents": ["PIERRE_BARROIS_x", "MARIE_LALOUX_x"],
+  "conjoints": ["BERENGERE_DECRAENE_x"],
+  "enfants": [
+    "BENOIT_BARROIS_x",
+    "CLEMENT_BARROIS_2_x",
+    "GUILLAUME_BARROIS_x"
+  ]
+},
+
+"COLIN_BARROIS_x": {
+  "id": "COLIN_BARROIS_x",
+  "prenom": "Colin",
+  "nom": "BARROIS",
+  "parents": ["PIERRE_BARROIS_x", "MARIE_LALOUX_x"],
+  "conjoints": ["NATHALIE_RENARD_x"],
+  "enfants": ["MAXENCE_BARROIS_x"]
+},
+
+"ADRIEN_BARROIS_x": {
+  "id": "ADRIEN_BARROIS_x",
+  "prenom": "Adrien",
+  "nom": "BARROIS",
+  "parents": ["PIERRE_BARROIS_x", "MARIE_LALOUX_x"],
+  "conjoints": ["CAMILLE_BRUNET_x"],
+  "enfants": [
+    "ELISE_BARROIS_x",
+    "ROBIN_BARROIS_x"
+  ]
+},
+
+
+  // ───────────── Bernard BARROIS → SUEL
+"BERNARD_BARROIS_x": {
+  "id": "BERNARD_BARROIS_x",
+  "prenom": "Bernard",
+  "nom": "BARROIS",
+  "parents": ["GENEVIEVE_MARCHANT_1916", "RENE_BARROIS_x"],
+  "conjoints": ["ANNE_MARIE_SUEL_x"],
+  "enfants": [
+    "ANNE_BARROIS_x",
+    "FRANCOIS_BARROIS_x",
+    "CLAIRE_BARROIS_x"
+  ]
+},
+
+"ANNE_BARROIS_x": {
+  "id": "ANNE_BARROIS_x",
+  "prenom": "Anne",
+  "nom": "BARROIS",
+  "parents": ["BERNARD_BARROIS_x", "ANNE_MARIE_SUEL_x"],
+  "conjoints": ["ROBIN_SAUTLER_x"],
+  "enfants": [
+    "ELOISE_SAUTLER_x",
+    "CECILE_SAUTLER_x",
+    "MANON_SAUTLER_x"
+  ]
+},
+
+"FRANCOIS_BARROIS_x": {
+  "id": "FRANCOIS_BARROIS_x",
+  "prenom": "François",
+  "nom": "BARROIS",
+  "parents": ["BERNARD_BARROIS_x", "ANNE_MARIE_SUEL_x"],
+  "conjoints": ["AGNES_PRUNIERES_x"],
+  "enfants": []
+},
+
+"CLAIRE_BARROIS_x": {
+  "id": "CLAIRE_BARROIS_x",
+  "prenom": "Claire",
+  "nom": "BARROIS",
+  "parents": ["BERNARD_BARROIS_x", "ANNE_MARIE_SUEL_x"],
+  "conjoints": ["JACQUES_LEIBE_x"],
+  "enfants": [
+    "DAVID_LEIBE_x",
+    "MARGOT_LEIBE_x"
+  ]
+}
+
+
 
 
 

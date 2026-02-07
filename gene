@@ -3457,28 +3457,71 @@
   },
 
   // ───────────── René MARCHANT (1941–1974)
-  "RENE_MARCHANT_1941": {
-    "id": "RENE_MARCHANT_1941",
-    "prenom": "René",
-    "nom": "MARCHANT",
-    "naissance": "1941",
-    "deces": "1974",
-    "parents": ["RENE_MARCHANT_1912", "JEANNETTE_WATTEL_1914"],
-    "conjoints": ["DANIELLE_MAHIEUX_1942"],
-    "enfants": []
-  },
-
-  "DANIELLE_MAHIEUX_1942": {
-    "id": "DANIELLE_MAHIEUX_1942",
-    "prenom": "Danielle",
-    "nom": "MAHIEUX",
-    "naissance": "1942",
-    "deces": "2007",
-    "parents": [],
-    "conjoints": ["RENE_MARCHANT_1941"],
-    "enfants": []
-  }
+"RENE_MARCHANT_1941": {
+  "id": "RENE_MARCHANT_1941",
+  "prenom": "René",
+  "nom": "MARCHANT",
+  "naissance": "1941",
+  "deces": "1974",
+  "parents": ["RENE_MARCHANT_1912", "JEANNETTE_WATTEL_1914"],
+  "conjoints": ["DANIELLE_MAHIEUX_1942"],
+  "enfants": ["WILFRIED_SCHAICHET_x"]
 },
+
+"DANIELLE_MAHIEUX_1942": {
+  "id": "DANIELLE_MAHIEUX_1942",
+  "prenom": "Danielle",
+  "nom": "MAHIEUX",
+  "naissance": "1942",
+  "deces": "2007",
+  "parents": [],
+  "conjoints": ["RENE_MARCHANT_1941"],
+  "enfants": ["WILFRIED_SCHAICHET_x"]
+},
+
+"WILFRIED_SCHAICHET_x": {
+  "id": "WILFRIED_SCHAICHET_x",
+  "prenom": "Wilfried",
+  "nom": "SCHAICHET",
+  "nom_naissance": "MARCHANT",
+  "parents": ["RENE_MARCHANT_1941", "DANIELLE_MAHIEUX_1942"],
+  "conjoints": ["ANNE_MARIE_FISCHER_x"],
+  "enfants": [
+    "CLEMENTINE_SCHAICHET_x",
+    "ARCADI_SCHAICHET_x"
+  ]
+},
+
+"ANNE_MARIE_FISCHER_x": {
+  "id": "ANNE_MARIE_FISCHER_x",
+  "prenom": "Anne-Marie",
+  "nom": "FISCHER",
+  "parents": [],
+  "conjoints": ["WILFRIED_SCHAICHET_x"],
+  "enfants": [
+    "CLEMENTINE_SCHAICHET_x",
+    "ARCADI_SCHAICHET_x"
+  ]
+},
+
+"CLEMENTINE_SCHAICHET_x": {
+  "id": "CLEMENTINE_SCHAICHET_x",
+  "prenom": "Clémentine",
+  "nom": "SCHAICHET",
+  "parents": ["WILFRIED_SCHAICHET_x", "ANNE_MARIE_FISCHER_x"],
+  "conjoints": [],
+  "enfants": []
+},
+
+"ARCADI_SCHAICHET_x": {
+  "id": "ARCADI_SCHAICHET_x",
+  "prenom": "Arcadi",
+  "nom": "SCHAICHET",
+  "parents": ["WILFRIED_SCHAICHET_x", "ANNE_MARIE_FISCHER_x"],
+  "conjoints": [],
+  "enfants": []
+}
+
 {
   "GENEVIEVE_MARCHANT_1916": {
     "id": "GENEVIEVE_MARCHANT_1916",

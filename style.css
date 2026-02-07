@@ -1,0 +1,48 @@
+body {
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  background: #f5f5f5;
+}
+
+header {
+  padding: 1em;
+  background: #2c3e50;
+  color: white;
+}
+
+input {
+  width: 100%;
+  padding: .5em;
+  margin-top: .5em;
+}
+
+main {
+  display: flex;
+}
+
+#list {
+  width: 35%;
+  max-height: 90vh;
+  overflow: auto;
+  background: white;
+}
+
+#person {
+  flex: 1;
+  padding: 1em;
+}
+
+.item {
+  padding: .5em;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+
+.item:hover {
+  background: #ecf0f1;
+}
+
+span {
+  color: #2980b9;
+  cursor: pointer;
+}

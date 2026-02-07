@@ -1,6 +1,6 @@
 let DATA = {};
 
-fetch("gene.json")
+fetch("gene_corrected.json")
   .then(r => r.json())
   .then(d => {
     DATA = d;

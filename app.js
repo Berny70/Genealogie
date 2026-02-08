@@ -65,27 +65,63 @@ function toggleChildren(container, childrenIds, data) {
 }
 
 function renderPerson(person, data, container) {
-  if (!person || typeof person !== "object") return;
+  if (!person) return;
 
-  const div = document.createElement("div");
-  div.className = "person";
-  div.innerHTML = `<div class="name">${safeFormat(person)}</div>`;
-  container.appendChild(div);
+  const block = document.createElement("div");
+  block.className = "person-block";
 
-  if (Array.isArray(person.enfants) && person.enfants.length > 0) {
+  // Ligne personne + conjoints
+  const header = document.createElement("div");
+  header.className = "person-header";
+
+  header.innerHTML = `<span class="person-name">
+    ${person.prenom} ${person.nom}
+    ${person.naissance ? `(${person.naissance}${person.deces ? "–" + person.deces : ""})` : ""}
+  </span>`;
+
+  // Ajout des conjoints
+  if (person.conjoints && person.conjoints.length > 0) {
+    const spouses = document.createElement("span");
+    spouses.className = "spouses";
+
+    person.conjoints.forEach(id => {
+      if (data[id]) {
+        spouses.innerHTML += `
+          <span class="spouse">❤ ${data[id].prenom} ${data[id].nom}</span>
+        `;
+      }
+    });
+
+    header.appendChild(spouses);
+  }
+
+  block.appendChild(header);
+  container.appendChild(block);
+
+  // Enfants
+  if (person.enfants && person.enfants.length > 0) {
     const btn = document.createElement("button");
     btn.textContent = "Afficher les enfants";
+    btn.className = "btn-children";
 
     const childrenDiv = document.createElement("div");
     childrenDiv.className = "children";
     childrenDiv.style.display = "none";
 
     btn.onclick = () => {
-      toggleChildren(childrenDiv, person.enfants, data);
+      if (childrenDiv.childElementCount === 0) {
+        person.enfants.forEach(cid => {
+          if (data[cid]) {
+            renderPerson(data[cid], data, childrenDiv);
+          }
+        });
+      }
+      childrenDiv.style.display =
+        childrenDiv.style.display === "none" ? "block" : "none";
     };
 
-    div.appendChild(btn);
-    div.appendChild(childrenDiv);
+    block.appendChild(btn);
+    block.appendChild(childrenDiv);
   }
 }
 

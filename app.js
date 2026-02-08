@@ -7,6 +7,7 @@ function initTree(data) {
   const root = document.getElementById("tree");
 
   const lucien = data["LUCIEN_MARCHANT_1873"];
+   console.log("Lucien :", lucien);
   if (!lucien) {
     console.error("Lucien introuvable");
     return;

@@ -7,22 +7,39 @@ function initTree(data) {
   const root = document.getElementById("tree");
 
   const lucien = data["LUCIEN_MARCHANT_1873"];
-  const pauline = data["PAULINE_BIESWAL_1879"];
+  if (!lucien) {
+    console.error("Lucien introuvable");
+    return;
+  }
+
+  const paulineId = lucien.conjoints?.[0];
+  const pauline = data[paulineId];
+
+  if (!pauline) {
+    console.warn("Conjointe introuvable pour Lucien :", paulineId);
+  }
 
   const coupleDiv = document.createElement("div");
   coupleDiv.className = "couple";
 
   coupleDiv.innerHTML = `
     <div class="name">
-      ${lucien.prenom} ${lucien.nom} (${lucien.naissance}–${lucien.deces})
-      <br>✚
-      <br>${pauline.prenom} ${pauline.nom} (${pauline.naissance}–${pauline.deces})
+      ${lucien.prenom} ${lucien.nom}
+      (${lucien.naissance ?? "?"}–${lucien.deces ?? "?"})
+      <br>✚<br>
+      ${
+        pauline
+          ? `${pauline.prenom} ${pauline.nom}
+             (${pauline.naissance ?? "?"}–${pauline.deces ?? "?"})`
+          : "Conjointe inconnue"
+      }
     </div>
     <button>Afficher les enfants</button>
   `;
 
   const childrenDiv = document.createElement("div");
   childrenDiv.className = "children";
+  childrenDiv.style.display = "none";
 
   coupleDiv.appendChild(childrenDiv);
   root.appendChild(coupleDiv);
@@ -31,6 +48,7 @@ function initTree(data) {
     toggleChildren(childrenDiv, lucien.enfants, data);
   };
 }
+
 
 function toggleChildren(container, childrenIds, data) {
   if (container.childElementCount === 0) {

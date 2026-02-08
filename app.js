@@ -1,7 +1,8 @@
 fetch("genealogie_valide.json")
-  .then(res => res.json())
-  .then(data => initTree(data));
-
+  .then(r => r.text())
+  .then(t => {
+    console.log("DÉBUT :", t.slice(0, 100));
+  });
 function initTree(data) {
   const root = document.getElementById("tree");
 

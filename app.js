@@ -1,41 +1,35 @@
-// Chargement du fichier JSON
 fetch("genealogie_valide.json")
-  .then(res => res.json())
+  .then(r => r.json())
   .then(data => initTree(data))
-  .catch(err => console.error("Erreur JSON :", err));
+  .catch(e => console.error("Erreur JSON :", e));
 
-/**
- * Initialisation de l'arbre
- * Point de départ : Lucien Marchant + conjointe
- */
 function initTree(data) {
   const root = document.getElementById("tree");
   root.innerHTML = "";
 
   const lucien = data["LUCIEN_MARCHANT_1873"];
+  console.log("Lucien :", lucien);
+
   if (!lucien) {
-    console.error("Lucien Marchant introuvable dans le JSON");
+    console.error("Lucien introuvable");
     return;
   }
 
-  // Récupération du premier conjoint (s'il existe)
   const conjointId = lucien.conjoints?.[0];
-  const conjointe = data[conjointId] ?? {
+  const conjointe = data[conjointId] || {
     prenom: "Pauline",
     nom: "BIESWAL",
     naissance: "?",
     deces: "?"
   };
 
-  // Bloc couple fondateur
   const coupleDiv = document.createElement("div");
   coupleDiv.className = "couple";
-
   coupleDiv.innerHTML = `
     <div class="name">
-      ${formatPerson(lucien)}
+      ${safeFormat(lucien)}
       <br>✚<br>
-      ${formatPerson(conjointe)}
+      ${safeFormat(conjointe)}
     </div>
     <button>Afficher les enfants</button>
   `;
@@ -52,20 +46,15 @@ function initTree(data) {
   };
 }
 
-/**
- * Affiche / masque les enfants d'une personne
- */
 function toggleChildren(container, childrenIds, data) {
-  if (!Array.isArray(childrenIds) || childrenIds.length === 0) {
-    return;
-  }
+  if (!Array.isArray(childrenIds)) return;
 
   if (container.childElementCount === 0) {
     childrenIds.forEach(id => {
       const person = data[id];
       if (!person) {
         console.warn("Personne absente du JSON :", id);
-        return;
+        return; // ⛔ PAS de renderPerson
       }
       renderPerson(person, data, container);
     });
@@ -75,21 +64,12 @@ function toggleChildren(container, childrenIds, data) {
     container.style.display === "none" ? "block" : "none";
 }
 
-/**
- * Affichage d'une personne et de son bouton "Afficher les enfants"
- */
 function renderPerson(person, data, container) {
-  if (!person) return;
+  if (!person || typeof person !== "object") return;
 
   const div = document.createElement("div");
   div.className = "person";
-
-  div.innerHTML = `
-    <div class="name">
-      ${formatPerson(person)}
-    </div>
-  `;
-
+  div.innerHTML = `<div class="name">${safeFormat(person)}</div>`;
   container.appendChild(div);
 
   if (Array.isArray(person.enfants) && person.enfants.length > 0) {
@@ -109,16 +89,13 @@ function renderPerson(person, data, container) {
   }
 }
 
-/**
- * Formatage d'une personne (nom + dates)
- */
-function formatPerson(p) {
-  if (!p) return "?";
+function safeFormat(p) {
+  if (!p || typeof p !== "object") return "❓ Personne inconnue";
 
-  const prenom = p.prenom ?? "?";
-  const nom = p.nom ?? "";
-  const naissance = p.naissance ?? "?";
-  const deces = p.deces ?? "";
+  const prenom = p.prenom || "?";
+  const nom = p.nom || "";
+  const naissance = p.naissance || "?";
+  const deces = p.deces || "";
 
   return `${prenom} ${nom} (${naissance}${deces ? "–" + deces : ""})`;
 }

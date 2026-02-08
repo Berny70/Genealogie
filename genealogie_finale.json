@@ -4363,7 +4363,18 @@
     "parents": ["LUCIEN_MARCHANT_1873", "PAULINE_BIESWAL_1879"],
     "conjoints": [],
     "enfants": []
-  }
+  },
+  "GINETTE_VAN_DE_VELDE_x": {
+  "id": "GINETTE_VAN_DE_VELDE_x",
+  "prenom": "Ginette",
+  "nom": "VAN DE VELDE",
+  "naissance": "?",
+  "deces": "?",
+  "parents": [],
+  "conjoints": ["ALFRED_MARCHANT_1907"],
+  "enfants": []
+}
+
 }
 
 

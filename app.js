@@ -1,4 +1,4 @@
-fetch("genealogie_reparee.json")
+fetch("genealogie_finale.json")
   .then(r => r.json())
   .then(data => initTree(data))
   .catch(e => console.error("Erreur JSON :", e));

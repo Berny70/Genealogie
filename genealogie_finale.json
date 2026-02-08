@@ -4382,7 +4382,13 @@
   "deces": "1969",
   "parents": [],
   "conjoints": ["ALFRED_MARCHANT_1907"],
-  "enfants": []
+  "enfants": [      
+      "MARIETTE_MARCHANT_1931",
+      "THERESE_MARCHANT_1934",
+      "JEAN_ELOI_MARCHANT_x",
+      "FREDDY_MARCHANT_x",
+      "HUGUES_MARCHANT_x",
+      "CHRISTINE_MARCHANT_x"]
 }
 }
 

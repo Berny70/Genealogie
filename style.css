@@ -9,16 +9,32 @@ h1 {
   text-align: center;
 }
 
-.person {
+.couple, .person {
   background: white;
   border: 1px solid #ccc;
-  padding: 0.5rem;
-  margin: 0.5rem;
-  border-radius: 6px;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem auto;
+  max-width: 400px;
+}
+
+.couple {
+  background: #eaf2f8;
+}
+
+.name {
+  font-weight: bold;
 }
 
 .children {
   margin-left: 2rem;
-  border-left: 2px dashed #aaa;
+  border-left: 2px dashed #bbb;
   padding-left: 1rem;
+  display: none;
+}
+
+button {
+  margin-top: 0.5rem;
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
 }

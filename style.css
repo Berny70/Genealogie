@@ -1,0 +1,60 @@
+body {
+  font-family: system-ui, Arial, sans-serif;
+  background: #f5f6f7;
+  padding: 20px;
+}
+
+.person-block {
+  background: white;
+  border-radius: 10px;
+  padding: 10px 14px;
+  margin: 10px 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  max-width: 600px;
+}
+
+.person-header {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.person-name {
+  font-weight: 600;
+  font-size: 1.05em;
+}
+
+.spouses {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.spouse {
+  background: #f0f0f0;
+  border-radius: 12px;
+  padding: 2px 8px;
+}
+
+.children {
+  margin-left: 30px;
+  margin-top: 10px;
+  border-left: 2px solid #ddd;
+  padding-left: 12px;
+}
+
+.btn-children {
+  margin-top: 8px;
+  font-size: 0.85em;
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: none;
+  background: #e0e0e0;
+  cursor: pointer;
+}
+
+.btn-children:hover {
+  background: #d4d4d4;
+}

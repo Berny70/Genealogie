@@ -1,4 +1,4 @@
-const CACHE = "genealogie-v1";
+const CACHE = "genealogie-v1.1";
 
 self.addEventListener("install", e => {
   e.waitUntil(
